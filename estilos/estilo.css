@@ -1,0 +1,374 @@
+
+body {
+    margin-right: 40px;
+    margin-left: 100px;
+    margin-top: 50px;
+    background: url(background-div.png);
+}
+
+hr {
+    border-top: 5px solid rgba(241, 199, 8, 0.822);
+    margin-left: 80px;
+    margin-right: 80px;
+    
+}
+
+p {
+    font-family: 'Roboto Mono', monospace;
+}
+
+h2{
+    color: darkblue;
+    text-align: center;
+    font-size: 30pt;
+    font-family: 'Ropa Sans', sans-serif;
+}
+
+h3 {
+    color: gray;
+    text-align: center;
+    font-size: 30pt;
+    font-family: 'Ropa Sans', sans-serif;
+}
+/*Inicio Menu da tela Home*/
+.menu1 {
+    margin-left: -100px;
+    margin-right: -40px;
+    margin-top: -50px;
+    background-image: url(imagem2.png);
+    height: 780px;
+    margin-bottom: 30px;
+}
+.drop {
+    font-size: 30pt;
+}
+.menuNav1 {
+    position: absolute;
+    top: 60px;
+    left: 700px;
+
+}
+.menuNav1 a {
+    color: white;
+    text-decoration: none;
+    margin-right: 50px;
+
+}
+
+.logoHome {
+    width: 400px;
+    position: absolute;
+    top: 40px;
+    left: 200px;
+}
+
+/*Fim Menu da tela Home*/
+
+/*Inicio Resumo Doeki*/
+.txtResumo {
+    width: 400px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 200px;
+    margin-top: -35px;
+}
+
+.imgResumo {
+    display: inline-block;
+    width: 400px;
+    margin-top: -25px;
+    margin-right: 40px;
+    margin-left: 50px;
+    
+}
+
+.amigos {
+    height: 300px;
+    border-radius: 10px;
+    border: gray solid 3px;
+    box-shadow: gray 3px 3px 3px;
+}
+/*Fim Resumo Doeki*/
+
+/*Inicio O poder de mudar uma vida*/
+.poderMudar {
+    margin-left: 100px;
+    
+}
+
+.txtPoder {
+    width: 800px;
+    text-align: center;
+    margin: -20px auto 0 auto;
+}
+
+.video1 {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.video2 {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.video3 {
+    display: inline-block;
+    margin-bottom: 30px;
+}
+/*Fim O poder de mudar uma vida*/
+
+/*Inicio Footer Home */
+.fimPagina {
+    position: absolute;
+    width: 1382px;
+    height: 837.5px;
+    top: 1700px;
+    left: 0;
+    text-align: center;
+    
+}
+
+.txtDoeki {
+    position: absolute;
+    bottom: 100px;
+    width: 300px;
+    left: 300px;
+    font-size: 15pt;
+    
+}
+
+.endereco {
+    position: absolute;
+    width: 300px;
+    bottom: 260px;
+    font-size: 15pt;
+    left: 750px;
+    text-align: left;
+    
+}
+
+.enderecoEsq {
+    text-align: left;
+}
+
+.doeaki {
+    position: absolute;
+    width: 230px;
+    right: 100px;
+    top: 270px;
+}
+
+.facebook {
+    position: absolute;
+    bottom: 100px;
+    right: 500px;
+}
+
+.insta {
+    position: absolute;
+    bottom: 100px;
+    right: 200px;
+}
+
+.whatsapp {
+    position: absolute;
+    bottom: -10px;
+    right: 540px;
+}
+
+.email {
+    position: absolute;
+    bottom: -10px;
+    right: 210px;
+}
+/*Fim Footer Home*/
+
+/*Inicio menu demais telas*/
+.logoDoacao {
+    width: 300px;
+    position: absolute;
+    top: 10px;
+}
+
+.menuNav2 {
+    position: absolute;
+    top: 30px;
+    left: 700px;
+
+}
+.bgmenu {
+    background-color: rgb(255, 236, 234);
+    width: 90px;
+    display: inline-block;
+    margin-right: 20px;
+    text-align: center;
+}
+.menuNav2 a {
+    color: black;
+    text-decoration: none;
+    width: 40px;
+}
+
+.diferente {
+    margin-left: 300px;
+    margin-top: 100px;
+}
+/*Fim menu demais telas*/
+
+/*Inicio Passo para doar no Doeki*/
+.passos {
+    text-align: center;
+}
+
+.passos p {
+    margin-left: 20px;
+}
+
+.imgApertar {
+    width: 150px;
+    position: absolute;
+    top: 150px;
+    left: 200px;
+}
+
+.imgPonteiro {
+    width: 150px;
+    position: absolute;
+    top: 150px;
+    left: 400px;
+}
+
+.imgUniao {
+    width: 150px;
+    position: absolute;
+    top: 150px;
+    left: 600px;
+}
+
+.imgMaoCoracao {
+    width: 150px;
+    position: absolute;
+    top: 150px;
+    left: 800px;
+}
+
+.imgCadeiranteFeliz {
+    width: 150px;
+    position: absolute;
+    top: 150px;
+    left: 1000px;
+}
+
+.divisoriaDoacoes {
+    margin-top: 350px;
+}
+/*Fim Passo para doar no Doeki*/
+
+/*Inicio Formulário*/
+.formulario {
+    text-align: center;
+}
+
+.conteinerForm {
+    margin: 0 auto 0 auto;
+    text-align: left;
+    width: 500px;
+}
+
+.txtFormulario {
+    width: 500px;
+    margin: 30px auto 20px auto;
+}
+
+.labelForm1, .labelForm2 {
+    color: gray;
+    text-align: center;
+    font-size: 20pt;
+    font-family: 'Ropa Sans', sans-serif;
+    margin-left: 50px;
+}
+
+.radioDoador {
+    margin-right: 50px;
+}
+
+.inputNome, .inputSobrenome, .inputEndereco, .inputEmail {
+    width: 500px;
+}
+
+.botaoEnviar {
+    width: 500px;
+    height: 50px;
+    font-size: 20pt;
+    background-color: rgba(241, 199, 8, 0.822);
+    color: darkblue;
+    border: 2px darkblue solid;
+}
+/*Fim Formulário*/
+
+/*Inicio Footer doação*/
+.fimDoacao {
+    position: absolute;
+    width: 1382px;
+    height: 837.5px;
+    left: 0;
+    text-align: center;
+    top: 1000px;
+    
+}
+
+.txtDoeki {
+    position: absolute;
+    bottom: 100px;
+    width: 300px;
+    left: 300px;
+    font-size: 15pt;
+    
+}
+
+.endereco {
+    position: absolute;
+    width: 300px;
+    bottom: 260px;
+    font-size: 15pt;
+    left: 750px;
+    text-align: left;
+    
+}
+
+.enderecoEsq {
+    text-align: left;
+}
+
+.doeaki {
+    position: absolute;
+    width: 230px;
+    right: 100px;
+    top: 270px;
+}
+
+.facebook {
+    position: absolute;
+    bottom: 100px;
+    right: 500px;
+}
+
+.insta {
+    position: absolute;
+    bottom: 100px;
+    right: 200px;
+}
+
+.whatsapp {
+    position: absolute;
+    bottom: -10px;
+    right: 540px;
+}
+
+.email {
+    position: absolute;
+    bottom: -10px;
+    right: 210px;
+}
+/*Fim Footer doação*/
