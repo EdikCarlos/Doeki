@@ -18,14 +18,14 @@ p {
 }
 
 h2{
-    color: darkblue;
+    color: #34495E;
     text-align: center;
     font-size: 30pt;
     font-family: 'Ropa Sans', sans-serif;
 }
 
 h3 {
-    color: gray;
+    color: #34495E;
     text-align: center;
     font-size: 30pt;
     font-family: 'Ropa Sans', sans-serif;
@@ -123,10 +123,10 @@ h3 {
     position: absolute;
     width: 1382px;
     height: 837.5px;
-    top: 1700px;
+    top: 1830px;
     left: 0;
     text-align: center;
-    
+    border: dotted red 1px;
 }
 
 .txtDoeki {
@@ -272,8 +272,15 @@ h3 {
 
 .conteinerForm {
     margin: 0 auto 0 auto;
-    text-align: left;
     width: 500px;
+    text-align: left;
+}
+
+
+
+.conteinerForm p {
+    margin-bottom: 1px;
+    
 }
 
 .txtFormulario {
@@ -282,7 +289,7 @@ h3 {
 }
 
 .labelForm1, .labelForm2 {
-    color: gray;
+    color: #34495E;
     text-align: center;
     font-size: 20pt;
     font-family: 'Ropa Sans', sans-serif;
@@ -293,17 +300,39 @@ h3 {
     margin-right: 50px;
 }
 
-.inputNome, .inputSobrenome, .inputEndereco, .inputEmail {
-    width: 500px;
+.dataNasc {
+    margin-right:45px ;
+    width: 225px ;
+    display: inline-block;
 }
 
-.botaoEnviar {
+.telefone {
+    width: 225px;
+    display: inline-block;
+}
+
+.inputData, .inputTel {
+    background-color: lightblue;
+    border-radius: 5px;
+    height: 20px;
+    width: 220px;
+}
+
+.inputNome, .inputSobrenome, .inputEndereco, .inputEmail {
+    width: 500px;
+    background-color: lightblue;
+    border-radius: 5px;
+    height: 20px;
+
+}
+
+.conteinerForm .botaoEnviar {
     width: 500px;
     height: 50px;
     font-size: 20pt;
     background-color: rgba(241, 199, 8, 0.822);
-    color: darkblue;
-    border: 2px darkblue solid;
+    color: #34495E;
+    border: 2px #34495E solid;
 }
 /*Fim Formulário*/
 
@@ -314,8 +343,7 @@ h3 {
     height: 837.5px;
     left: 0;
     text-align: center;
-    top: 1000px;
-    
+    top: 1180px;
 }
 
 .txtDoeki {
