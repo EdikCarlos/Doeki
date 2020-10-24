@@ -71,6 +71,8 @@ h3 {
     vertical-align: top;
     margin-left: 200px;
     margin-top: -35px;
+    background-color: rgba(203, 236, 247, 0.5);
+    border-radius:8px ;
 }
 
 .imgResumo {
@@ -100,6 +102,8 @@ h3 {
     width: 800px;
     text-align: center;
     margin: -20px auto 0 auto;
+    background-color: rgba(203, 236, 247, 0.5);
+    border-radius:8px ;
 }
 
 .video1 {
@@ -436,11 +440,10 @@ h3 {
     width: 50%;
     height: 50%;
     margin-top: 100px;
-    border: solid 2px  rgba(241, 199, 8, 0.822);
     border-radius:8px ;
     padding: 10px;
     font-family: 'Roboto Mono', monospace;
-    background-color: lightblue;
+    background-color: rgba(203, 236, 247, 0.5);
 }
 
 .divisoriaSobre{
@@ -474,11 +477,10 @@ h3 {
     width: 50%;
     height: 50%;
     margin-top: 0px;
-    border: solid 2px  rgba(241, 199, 8, 0.822);
     border-radius:8px ;
     padding: 10px;
     font-family: 'Roboto Mono', monospace;
-    background-color: lightblue;
+    background-color: rgba(203, 236, 247, 0.5);
 }
 .visao{
     width:100%;
@@ -491,11 +493,10 @@ h3 {
     width: 50%;
     height: 50%;
     margin-top: 0px;
-    border: solid 2px  rgba(241, 199, 8, 0.822);
     border-radius:8px ;
     padding: 10px;
     font-family: 'Roboto Mono', monospace;
-    background-color: lightblue;
+    background-color: rgba(203, 236, 247, 0.5);
 }
 .blocoPVa{
     display: inline-block;
@@ -513,11 +514,10 @@ h3 {
     width: 50%;
     height: 50%;
     margin-top: 0px;
-    border: solid 2px  rgba(241, 199, 8, 0.822);
     border-radius:8px ;
     padding: 10px;
     font-family: 'Roboto Mono', monospace;
-    background-color: lightblue;
+    background-color: rgba(203, 236, 247, 0.5);
 }.valores{
     width:100%;
     height:100%;
@@ -529,11 +529,10 @@ h3 {
     width: 50%;
     height: 50%;
     margin-top: 0px;
-    border: solid 2px  rgba(241, 199, 8, 0.822);
     border-radius:8px ;
     padding: 10px;
     font-family: 'Roboto Mono', monospace;
-    background-color: lightblue;
+    background-color: rgba(203, 236, 247, 0.5);
 }
 .ods{
     width:100%;
@@ -555,11 +554,10 @@ h3 {
     width: 80%;
     height: 80%;
     margin:  auto;
-    border: solid 2px  rgba(241, 199, 8, 0.822);
     border-radius:8px ;
     padding: 10px;
     font-family: 'Roboto Mono', monospace;
-    background-color: lightblue;
+    background-color: rgba(203, 236, 247, 0.5);
     margin-bottom: auto;
     justify-content: center;
 
@@ -581,3 +579,117 @@ h3 {
     top: 1500px;
 }
 /*Fim Página sobre*/
+/* Inicio Página parceiros */
+
+.titParc{
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    justify-content:center ;
+    align-items: center ;
+    font-size: 30px;
+    font-family: 'Roboto Mono', monospace;
+    color: #34495e;
+}
+.informativo{
+    border-radius: 8px;
+    width: 100%;
+    height: 5%;
+    margin-top: 40px;
+    padding: 10px;
+    font-family: 'Roboto Mono', monospace;
+    background-color:rgba(106, 230, 106, 0.5);
+    font-size: 13px;
+}
+.informativo h2{
+    font-size: 15px;
+} 
+.blocoPc1{
+    display:flex;
+    margin-top: 30px; 
+    text-align: justify;
+}
+
+.recode{
+    text-align: center;
+    width: 30%;
+    height: 30%;
+    margin-top: 10px;
+    margin-left: auto;
+    border-radius:8px ;
+    padding: 10px;
+    font-family: 'Roboto Mono', monospace;
+    background-color: rgba(203, 236, 247, 0.5);
+} 
+.aacd{ 
+    text-align: center;
+    width: 30%;
+    height: 30%;
+    margin-top: 10px;
+    margin-left: auto;
+    border-radius:8px ;
+    padding: 10px;
+    font-family: 'Roboto Mono', monospace;
+    background-color: rgba(203, 236, 247, 0.5);
+}
+.lacre{
+    text-align: center;
+    width: 30%;
+    height: 30%;
+    margin-top: 10px;
+    margin-left: auto;
+    border-radius:8px ;
+    padding: 10px;
+    font-family: 'Roboto Mono', monospace;
+    background-color: rgba(203, 236, 247, 0.5); 
+}
+
+ .blocoPc2{
+    display:flex;
+    margin-top: 30px;
+ }
+
+.senac{
+    text-align: center;
+    width: 30%;
+    height: 30%;
+    margin-top: 10px;
+    margin-left: auto;
+    border-radius:8px ;
+    padding: 10px;
+    font-family: 'Roboto Mono', monospace;
+    background-color: rgba(203, 236, 247, 0.5);
+}
+.cren{
+    text-align: center;
+    width: 30%;
+    height: 30%;
+    margin-top: 10px;
+    margin-left: auto;
+    border-radius:8px ;
+    padding: 10px;
+    font-family: 'Roboto Mono', monospace;
+    background-color: rgba(203, 236, 247, 0.5); 
+}
+.itau{
+    text-align: center;
+    width: 30%;
+    height: 30%;
+    margin-top: 10px;
+    margin-left: auto;
+    border-radius:8px ;
+    padding: 10px;
+    font-family: 'Roboto Mono', monospace;
+    background-color: rgba(203, 236, 247, 0.5); 
+}
+.fimParceiros {
+    position: absolute;
+    width: 1382px;
+    height: 837.5px;
+    left: 0;
+    text-align: center;
+    top: 1200px;
+}
+
+/* Fim Página Parceiros */
