@@ -419,6 +419,17 @@ h3 {
     color: #34495e;
     font-size: 30px;
 }
+.odss {
+    border: 1px black solid;
+    box-shadow: 1px 1px 1px black;
+}
+
+.saberMais {
+    text-align: center;
+    background-color: rgba(203, 236, 247, 0.5);
+    width: 600px;
+    margin:20px 300px ;
+}
 
 .quemSomos{
     width: 100%;
@@ -576,7 +587,7 @@ h3 {
     height: 837.5px;
     left: 0;
     text-align: center;
-    top: 1500px;
+    top: 2430px;
 }
 /*Fim Página sobre*/
 /* Inicio Página parceiros */
