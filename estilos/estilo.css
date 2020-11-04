@@ -6,13 +6,6 @@ body {
     background: url(background-div.png);
 }
 
-hr {
-    border-top: 5px solid rgba(241, 199, 8, 0.822);
-    margin-left: 80px;
-    margin-right: 80px;
-    
-}
-
 p {
     font-family: 'Roboto Mono', monospace;
 }
@@ -38,6 +31,8 @@ h3 {
     background-image: url(imagem2.png);
     height: 780px;
     margin-bottom: 30px;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 .drop {
     font-size: 30pt;
@@ -190,22 +185,17 @@ h3 {
 /*Inicio menu demais telas*/
 .logoDoacao {
     width: 300px;
-    position: absolute;
     top: 10px;
 }
 
 .menuNav2 {
-    position: absolute;
     top: 30px;
-    left: 700px;
-
 }
 .bgmenu {
     background-color: rgb(255, 236, 234);
-    width: 90px;
-    display: inline-block;
     margin-right: 20px;
-    text-align: center;
+    height: 50px;
+
 }
 .menuNav2 a {
     color: black;
@@ -215,57 +205,32 @@ h3 {
 
 .diferente {
     margin-left: 300px;
-    margin-top: 100px;
+    margin-top: -45px;
 }
 /*Fim menu demais telas*/
 
 /*Inicio Passo para doar no Doeki*/
-.passos {
-    text-align: center;
-}
-
-.passos p {
-    margin-left: 20px;
-}
 
 .imgApertar {
     width: 150px;
-    position: absolute;
-    top: 150px;
-    left: 200px;
 }
 
 .imgPonteiro {
     width: 150px;
-    position: absolute;
-    top: 150px;
-    left: 400px;
 }
 
 .imgUniao {
     width: 150px;
-    position: absolute;
-    top: 150px;
-    left: 600px;
 }
 
 .imgMaoCoracao {
     width: 150px;
-    position: absolute;
-    top: 150px;
-    left: 800px;
 }
 
 .imgCadeiranteFeliz {
     width: 150px;
-    position: absolute;
-    top: 150px;
-    left: 1000px;
 }
 
-.divisoriaDoacoes {
-    margin-top: 350px;
-}
 /*Fim Passo para doar no Doeki*/
 
 /*Inicio Formulário*/
@@ -355,12 +320,10 @@ h3 {
 }
 
 .txtDoeki {
-    position: absolute;
-    bottom: 100px;
+    bottom: 70px;
     width: 300px;
     left: 300px;
     font-size: 15pt;
-    
 }
 
 .endereco {
@@ -419,38 +382,14 @@ h3 {
     color: #34495e;
     font-size: 30px;
 }
-.odss {
-    border: 1px black solid;
-    box-shadow: 1px 1px 1px black;
-}
 
-.saberMais {
-    text-align: center;
-    background-color: rgba(203, 236, 247, 0.5);
-    width: 600px;
-    margin:20px 300px ;
-}
 
-.quemSomos{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center ;
-    align-items: center;
-
-}
 .quemSomos h2{
-    width: 40%;
-    height: 40%;
-    display: flex;
-    justify-content: center ;
-    align-items: center;
     color: #34495e;
 }
 .textoQuemSomos{
-    width: 50%;
-    height: 50%;
-    margin-top: 100px;
+    width: 700px;
+    margin: 30px auto;
     border-radius:8px ;
     padding: 10px;
     font-family: 'Roboto Mono', monospace;
@@ -524,6 +463,7 @@ h3 {
 .textoProposito{
     width: 50%;
     height: 50%;
+    margin-left: 30px;
     margin-top: 0px;
     border-radius:8px ;
     padding: 10px;
@@ -545,21 +485,7 @@ h3 {
     font-family: 'Roboto Mono', monospace;
     background-color: rgba(203, 236, 247, 0.5);
 }
-.ods{
-    width:100%;
-    height:100%;
-    display: inline-block;
-    justify-content: center ;
-    align-items: baseline;
-}
-.tit_ods{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    color: #34495e;
-    margin-bottom: auto;
-}
+
 
 .textoODS{
     width: 80%;
@@ -573,13 +499,14 @@ h3 {
     justify-content: center;
 
 }
-.tabelaODS{
-    display: inline-block;
-    margin:0px 300px;
-    justify-content: center;
-    background-color: lightgreen;
+
+
+.saberMais {
+    text-align: center;
+    background-color: rgba(203, 236, 247, 0.5);
     width: 600px;
-} 
+    margin:20px 300px ;
+}
 
 .fimSobre {
     position: absolute;
@@ -587,9 +514,10 @@ h3 {
     height: 837.5px;
     left: 0;
     text-align: center;
-    top: 2430px;
+    top: 2370px;
 }
 /*Fim Página sobre*/
+
 /* Inicio Página parceiros */
 
 .titParc{
@@ -623,37 +551,36 @@ h3 {
 }
 
 .recode{
-    text-align: center;
     width: 30%;
-    height: 30%;
+    height: 100%;
     margin-top: 10px;
-    margin-left: auto;
     border-radius:8px ;
     padding: 10px;
     font-family: 'Roboto Mono', monospace;
     background-color: rgba(203, 236, 247, 0.5);
-} 
+    margin-right: 20px;
+}
 .aacd{ 
     text-align: center;
-    width: 30%;
-    height: 30%;
+    height: 100%;
     margin-top: 10px;
     margin-left: auto;
     border-radius:8px ;
     padding: 10px;
     font-family: 'Roboto Mono', monospace;
     background-color: rgba(203, 236, 247, 0.5);
+    margin-right: 20px;
 }
 .lacre{
     text-align: center;
-    width: 30%;
-    height: 30%;
+    height: 100%;
     margin-top: 10px;
     margin-left: auto;
     border-radius:8px ;
     padding: 10px;
     font-family: 'Roboto Mono', monospace;
     background-color: rgba(203, 236, 247, 0.5); 
+    margin-right: 20px;
 }
 
  .blocoPc2{
@@ -700,7 +627,42 @@ h3 {
     height: 837.5px;
     left: 0;
     text-align: center;
-    top: 1200px;
+    top: 1700px;
+    display: block;
 }
 
+.invisivelParceiros {
+    text-align: center;
+    display: none;
+}
+
+.txtDoekiInvisivel {
+    font-size: 15pt;
+    min-width: 350px;
+}
+
+.enderecoInvisivel {
+    font-size: 15pt;
+    min-width: 200px;
+}
+
+.enderecoEsqInvisivel {
+    text-align: left;
+}
+
+.botaoDoeaki2 {
+    min-width: 400px;
+}
+
+
+
 /* Fim Página Parceiros */
+
+@media only screen and (max-width : 1000px) {
+    .fimParceiros, .finalDoacao, .finalSobre1{
+        display: none;
+    }
+    .invisivelParceiros {
+        display: block;
+    }
+  }

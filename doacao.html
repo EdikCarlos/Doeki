@@ -6,42 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doeki | Doação</title>
     <link rel="stylesheet" href="estilos/estilo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 
 <body>
-    <div class="menu2">
-        <nav class="menuNav2">
-            <div class="bgmenu"><a href="index.html"><span class="drop">H</span>ome</a></div>
-            <div class="bgmenu"><a href="sobre.html"><span class="drop">S</span>obre</a></div>
-            <div class="bgmenu"><a href="doacao.html"><span class="drop">D</span>oação</a></div>
-            <div class="bgmenu"><a href="parceiros.html"><span class="drop">P</span>arceiros</a></div>
-        </nav>
-        <a href="index.html"><img class="logoDoacao" src="imagens/logoSimFundo.png" alt="Logo-Doeki"></a>
-        <hr class="diferente">
+    <div class="container-fluid">
+        <div class="menu2">
+            <nav class="navbar navbar-expand-md navbar-dark mt-1 mb-4"
+                style="background-color: rgba(255, 236, 234, 0.6); width: 100%;">
+                <button class="navbar-toggler bg-primary" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <a href="index.html" class="mx-5 navbar-brand"><img class="logoDoacao"
+                            src="imagens/logoSimFundo.png" alt=""></a>
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="text-dark nav-link" href="index.html"><span class="drop">H</span>ome</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-dark nav-link" href="sobre.html"><span class="drop">S</span>obre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-dark nav-link" href="doacao.html"><span class="drop">D</span>oação</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-dark nav-link" href="parceiros.html"><span class="drop">P</span>arceiros</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </div>
-    <div class="passos">
-        <div class="imgApertar">
+
+
+    <div class="passos row container-fluid">
+        <div class="imgApertar container col text-center">
             <img src="imagens/cliqueCoracao.svg" alt="Clicar-no-Coração" width="150px">
             <p>1º Clique se tiver algo que queira doar</p>
         </div>
-        <div class="imgPonteiro">
+        <div class="imgPonteiro container col text-center">
             <img src="imagens/ponteiro.svg" alt="Ponteiro" width="150px">
             <p>2º Preencha o formulário no Doeki</p>
         </div>
-        <div class="imgUniao">
+        <div class="imgUniao container col text-center">
             <img src="imagens/Maos.svg" alt="Mão-Ajudando" width="150px">
             <p>3º Fazemos a ponte para quem realmente precisa</p>
         </div>
-        <div class="imgMaoCoracao">
+        <div class="imgMaoCoracao container col text-center">
             <img src="imagens/coraMao.svg" alt="Mão-Coração" width="150px">
             <p>4º Onde a sua doação</p>
         </div>
-        <div class="imgCadeiranteFeliz">
+        <div class="imgCadeiranteFeliz container col text-center">
             <img src="imagens/caderinha.svg" alt="Cadeirante-Feliz" width="150px">
             <p>5º Transforma a vida de alguém.</p>
         </div>
     </div>
-    <hr class="divisoriaDoacoes">
+    <hr class="divisoriaDoacoes bg-warning">
     <div class="formulario">
         <iframe class="frameForm" src="formularioDoador.html" frameborder="0"></iframe>
     </div>
@@ -84,11 +107,75 @@
                 <img src="imagens/whatsapp 3.svg" alt="Whatsapp">
                 <p>(11) 97766-5544</p>
             </div>
-            <hr>
+            <hr class="bg-warning">
             <p>&copy;Doeki</p>
         </section>
     </div>
 
+
+    <div class="container invisivelParceiros">
+        <div class="finalSobre">
+            <section class="fimInvisivel">
+                <hr class="bg-warning">
+                <div class="container row" style="margin-top: 150px;">
+                    <div class="txtDoekiInvisivel col container mr-1 mb-1"
+                        style="background-color: rgba(203, 236, 247, 0.5);">
+                        <h3>Doeki</h3>
+                        <p>Doar é muito mais que apenas entregar um item ou algum valor para outra pessoa, doar é
+                            colocar um
+                            pouco de você na vida de outra pessoa, é poder ser a oração encarnada daquela pessoa, é
+                            poder dar
+                            uma esperança de mudança, dar um futuro, pequenas atitudes para nós são grandes
+                            realizações
+                            para
+                            quem precisa, você pode ser a diferença, doe!</p>
+                    </div>
+                    <div class="enderecoInvisivel col container mr-1 mb-1"
+                        style="background-color: rgba(203, 236, 247, 0.5);">
+                        <h3 class="enderecoEsq2">Endereço</h3>
+                        <p>Rua Araújo, 355</p>
+                        <p>Parque São Felipe</p>
+                        <p>CEP: 04870-90</p>
+                        <p>Tel: (11) 4192-8681</p>
+                    </div>
+                    <div class="botaoDoeaki2 col container mr-1 mb-1"
+                        style="background-color: rgba(203, 236, 247, 0.5);">
+                        <a href="doacao.html"><img class="doeaki2" src="imagens/coracao.png" alt="DoeAki"></a>
+                    </div>
+                </div>
+        </div>
+        <div class="container row text-center" style="margin-top: 100px;">
+            <div class="facebookInvisivel container col mr-1 mb-1" style="background-color: rgba(203, 236, 247, 0.5);">
+                <img src="imagens/facebook.svg" alt="Facebook">
+                <p>Facebook.com/DoekiOficial</p>
+            </div>
+            <div class="instaInvisivel container col mr-1 mb-1" style="background-color: rgba(203, 236, 247, 0.5);">
+                <img src="imagens/instagram.svg" alt="Instagram">
+                <p>Instagram.com/DoekiOficial</p>
+            </div>
+            <div class="emailInvisivel container col mr-1 mb-1" style="background-color: rgba(203, 236, 247, 0.5);">
+                <img src="imagens/gmail.svg" alt="Gmail">
+                <p>DoekiOficial@gmail.com</p>
+            </div>
+            <div class="whatsappInvisivel container col mr-1 mb-1" style="background-color: rgba(203, 236, 247, 0.5);">
+                <img src="imagens/whatsapp 3.svg" alt="Whatsapp">
+                <p>(11) 97766-5544</p>
+            </div>
+        </div>
+        <div class="container text-center">
+            <hr class="bg-warning">
+            <p>&copy;Doeki</p>
+            </section>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
 
 </body>
 
