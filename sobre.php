@@ -6,34 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doeki | Sobre</title>
     <link rel="stylesheet" href="estilos/estilo.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 
 <body>
     <div class="container-fluid">
         <div class="menu2">
-            <nav class="navbar navbar-expand-md navbar-dark mt-1 mb-4"
-                style="background-color: rgba(255, 236, 234, 0.6); width: 100%;">
-                <button class="navbar-toggler bg-primary" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+            <nav class="navbar navbar-expand-md navbar-dark mt-1 mb-4" style="background-color: rgba(255, 236, 234, 0.6); width: 100%;">
+                <button class="navbar-toggler bg-primary" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <a href="index.html" class="mx-5 navbar-brand"><img class="logoDoacao"
-                            src="imagens/logoSimFundo.png" alt=""></a>
+                    <a href="inicio.php" class="mx-5 navbar-brand"><img class="logoDoacao" src="imagens/logoSimFundo.png" alt=""></a>
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <a class="text-dark nav-link" href="index.html"><span class="drop">H</span>ome</a>
+                            <a class="text-dark nav-link" href="inicio.php"><span class="drop">H</span>ome</a>
                         </li>
                         <li class="nav-item">
-                            <a class="text-dark nav-link" href="sobre.html"><span class="drop">S</span>obre</a>
+                            <a class="text-dark nav-link" href="sobre.php"><span class="drop">S</span>obre</a>
                         </li>
                         <li class="nav-item">
-                            <a class="text-dark nav-link" href="doacao.html"><span class="drop">D</span>oação</a>
+                            <a class="text-dark nav-link" href="doacao.php"><span class="drop">D</span>oação</a>
                         </li>
                         <li class="nav-item">
-                            <a class="text-dark nav-link" href="parceiros.html"><span class="drop">P</span>arceiros</a>
+                            <a class="text-dark nav-link" href="parceiros.php"><span class="drop">P</span>arceiros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-dark nav-link" href="depoimentos.php"><span class="drop">D</span>epoimentos</a>
                         </li>
                     </ul>
                 </div>
@@ -105,18 +104,13 @@
     <section class="ods container">
         <h2>A Doeki atende às seguintes ODS:</h2>
         <div class="ods1 row container-fluid" style="margin-left: 150px;margin-bottom: 20px;">
-            <a href="https://brasil.un.org/pt-br/sdgs/1" target="_blank"><img class="container col mt-1 mr-1 "
-                    src="./imagens/ODS1.png" alt="ODS1" style="width: 250px;"></a>
-            <a href="https://brasil.un.org/pt-br/sdgs/3" target="_blank"><img class="container col mt-1 mr-1"
-                    src="./imagens/ODS3.png" alt="ODS3" style="width: 250px;"></a>
-            <a href="https://brasil.un.org/pt-br/sdgs/10" target="_blank"><img class="container col mt-1 mr-1"
-                    src="./imagens/ODS10.png" alt="ODS10" style="width: 250px;"></a>
+            <a href="https://brasil.un.org/pt-br/sdgs/1" target="_blank"><img class="container col mt-1 mr-1 " src="./imagens/ODS1.png" alt="ODS1" style="width: 250px;"></a>
+            <a href="https://brasil.un.org/pt-br/sdgs/3" target="_blank"><img class="container col mt-1 mr-1" src="./imagens/ODS3.png" alt="ODS3" style="width: 250px;"></a>
+            <a href="https://brasil.un.org/pt-br/sdgs/10" target="_blank"><img class="container col mt-1 mr-1" src="./imagens/ODS10.png" alt="ODS10" style="width: 250px;"></a>
         </div>
         <div class="container-fluid row" style="margin-left:150px;">
-            <a href="https://brasil.un.org/pt-br/sdgs/11" target="_blank"><img class="container col mt-1 mr-1"
-                    src="./imagens/ODS11.png" alt="ODS11" style="width: 250px;"></a>
-            <a href="https://brasil.un.org/pt-br/sdgs/12" target="_blank"><img class="container col mt-1 mr-1"
-                    src="./imagens/ODS12.png" alt="ODS12" style="width: 250px;"></a>
+            <a href="https://brasil.un.org/pt-br/sdgs/11" target="_blank"><img class="container col mt-1 mr-1" src="./imagens/ODS11.png" alt="ODS11" style="width: 250px;"></a>
+            <a href="https://brasil.un.org/pt-br/sdgs/12" target="_blank"><img class="container col mt-1 mr-1" src="./imagens/ODS12.png" alt="ODS12" style="width: 250px;"></a>
         </div>
         <p class="saberMais container"><strong>Para saber mais sobre cada uma delas, clique na imagem que
                 desejar!</strong></p>
@@ -134,8 +128,7 @@
             </p>
         </div>
         <div class="container text-center">
-            <a href="https://brasil.un.org/pt-br/sdgs" target="_blank"><img class="container" style="max-width: 900px;"
-                    src="imagens/odsCompleto.png" alt="Tabela-ODS"></a>
+            <a href="https://brasil.un.org/pt-br/sdgs" target="_blank"><img class="container" style="max-width: 900px;" src="imagens/odsCompleto.png" alt="Tabela-ODS"></a>
         </div>
     </section>
     <div class="finalSobre1">
@@ -157,7 +150,7 @@
                 <p>Tel: (11) 4192-8681</p>
             </div>
             <div class="botaoDoeaki">
-                <a href="doacao.html"><img class="doeaki" src="imagens/coracao.png" alt="DoeAki"></a>
+                <a href="doacao.php"><img class="doeaki" src="imagens/coracao.png" alt="DoeAki"></a>
             </div>
             <div class="facebook">
                 <img src="imagens/facebook.svg" alt="Facebook">
@@ -185,8 +178,7 @@
             <section class="fimInvisivel">
                 <hr class="bg-warning">
                 <div class="container row" style="margin-top: 150px;">
-                    <div class="txtDoekiInvisivel col container mr-1 mb-1"
-                        style="background-color: rgba(203, 236, 247, 0.5);">
+                    <div class="txtDoekiInvisivel col container mr-1 mb-1" style="background-color: rgba(203, 236, 247, 0.5);">
                         <h3>Doeki</h3>
                         <p>Doar é muito mais que apenas entregar um item ou algum valor para outra pessoa, doar é
                             colocar um
@@ -197,17 +189,15 @@
                             para
                             quem precisa, você pode ser a diferença, doe!</p>
                     </div>
-                    <div class="enderecoInvisivel col container mr-1 mb-1"
-                        style="background-color: rgba(203, 236, 247, 0.5);">
+                    <div class="enderecoInvisivel col container mr-1 mb-1" style="background-color: rgba(203, 236, 247, 0.5);">
                         <h3 class="enderecoEsq2">Endereço</h3>
                         <p>Rua Araújo, 355</p>
                         <p>Parque São Felipe</p>
                         <p>CEP: 04870-90</p>
                         <p>Tel: (11) 4192-8681</p>
                     </div>
-                    <div class="botaoDoeaki2 col container mr-1 mb-1"
-                        style="background-color: rgba(203, 236, 247, 0.5);">
-                        <a href="doacao.html"><img class="doeaki2" src="imagens/coracao.png" alt="DoeAki"></a>
+                    <div class="botaoDoeaki2 col container mr-1 mb-1" style="background-color: rgba(203, 236, 247, 0.5);">
+                        <a href="doacao.php"><img class="doeaki2" src="imagens/coracao.png" alt="DoeAki"></a>
                     </div>
                 </div>
         </div>
@@ -236,12 +226,8 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 
 

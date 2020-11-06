@@ -23,6 +23,23 @@ h3 {
     font-size: 30pt;
     font-family: 'Ropa Sans', sans-serif;
 }
+
+
+
+.testemunho{
+    margin: 10px;
+    border-radius: 8px;
+    border:#3498db solid 2px;
+    max-width: 350px;
+}
+
+.testemunho img{
+    padding-top: 5px;
+    padding-left: 75px;
+}
+.testemunho p, h4{
+    text-align: center;
+}
 /*Inicio Menu da tela Home*/
 .menu1 {
     background-image: url(imagem2.png);

@@ -20,20 +20,23 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <a href="index.html" class="mx-5 navbar-brand"><img class="logoDoacao"
+                    <a href="inicio.php" class="mx-5 navbar-brand"><img class="logoDoacao"
                             src="imagens/logoSimFundo.png" alt=""></a>
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <a class="text-dark nav-link" href="index.html"><span class="drop">H</span>ome</a>
+                            <a class="text-dark nav-link" href="inicio.php"><span class="drop">H</span>ome</a>
                         </li>
                         <li class="nav-item">
-                            <a class="text-dark nav-link" href="sobre.html"><span class="drop">S</span>obre</a>
+                            <a class="text-dark nav-link" href="sobre.php"><span class="drop">S</span>obre</a>
                         </li>
                         <li class="nav-item">
-                            <a class="text-dark nav-link" href="doacao.html"><span class="drop">D</span>oação</a>
+                            <a class="text-dark nav-link" href="doacao.php"><span class="drop">D</span>oação</a>
                         </li>
                         <li class="nav-item">
-                            <a class="text-dark nav-link" href="parceiros.html"><span class="drop">P</span>arceiros</a>
+                            <a class="text-dark nav-link" href="parceiros.php"><span class="drop">P</span>arceiros</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="text-dark nav-link" href="depoimentos.php"><span class="drop">D</span>epoimentos</a>
                         </li>
                     </ul>
                 </div>
@@ -65,11 +68,48 @@
         </div>
     </div>
     <hr class="divisoriaDoacoes bg-warning">
-    <div class="formulario">
-        <iframe class="frameForm" src="formularioDoador.html" frameborder="0"></iframe>
-    </div>
-    </form>
-    </div>
+    
+    <div class="formulario container">
+        
+    <h2 class="txtFormulario">Escolha uma opção para que nós possamos te ajudar ! =)</h2>
+        
+        <form method="POST" action="Database/admDoador.php">
+
+        <div class="conteinerForm">
+            <p>Email: </p>
+            <input class="inputNome" type="text" name="email">
+            <p>Nome: </p>
+            <input class="inputNome" type="text" name="nome">
+            <p>Sobrenome: </p>
+            <input class="inputSobrenome" type="text" name="sobrenome">
+            <div class="dataNasc">
+                <p>Data de Nascimento: </p>
+                <input class="inputData" type="date" name="data_nasc">
+            </div>
+            <div class="telefone">
+                <p>Número de telefone: </p>
+                <input class="inputTel" type="text" name="tel" placeholder="Apenas números">
+            </div>
+            <p>Endereço: </p>
+            <input class="inputEndereco" type="text" name="endereco">
+            <p>Qual é o item que você quer doar ou receber?</p>
+            <br>
+            <input class="check" type="checkbox" name="item" value="CadeiradeRodas">Cadeira de Rodas
+            <input class="check" type="checkbox" name="item" value="CadeiradeBanho">Cadeira de Banho
+            <input class="check" type="checkbox" name="item" value="Muleta">Muleta
+            <input class="check" type="checkbox" name="item" value="Bengala">Bengala
+            <br>  <br>
+            <p>Qual é o item que você quer doar ou receber?</p>
+            <br>
+            <div class="text-center">
+                <input type="radio" name="tipo" id="radioBeneficiario" value="beneficiario" checked>
+                <label for="beneficiario">Beneficiário</label>
+                <input type="radio" name="tipo" id="radioDoador" value="doador" style="margin-left: 20px;">
+                <label for="doador">Doador</label>   
+            </div>
+            
+            <br>
+            <input class="botaoEnviar" name="submit" type="submit" href="/Doeki_backend/inicio.php">
 
     <div class="finalDoacao">
         <section class="fimDoacao">
@@ -89,7 +129,7 @@
                 <p>Tel: (11) 4192-8681</p>
             </div>
             <div class="botaoDoeaki">
-                <a href="doacao.html"><img class="doeaki" src="imagens/coracao.png" alt="DoeAki"></a>
+                <a href="doacao.php"><img class="doeaki" src="imagens/coracao.png" alt="DoeAki"></a>
             </div>
             <div class="facebook">
                 <img src="imagens/facebook.svg" alt="Facebook">
@@ -99,11 +139,11 @@
                 <img src="imagens/instagram.svg" alt="Instagram">
                 <p>Instagram.com/DoekiOficial</p>
             </div>
-            <div class="email">
+            <div class="email mb-3">
                 <img src="imagens/gmail.svg" alt="Gmail">
                 <p>DoekiOficial@gmail.com</p>
             </div>
-            <div class="whatsapp">
+            <div class="whatsapp mb-3">
                 <img src="imagens/whatsapp 3.svg" alt="Whatsapp">
                 <p>(11) 97766-5544</p>
             </div>
@@ -140,7 +180,7 @@
                     </div>
                     <div class="botaoDoeaki2 col container mr-1 mb-1"
                         style="background-color: rgba(203, 236, 247, 0.5);">
-                        <a href="doacao.html"><img class="doeaki2" src="imagens/coracao.png" alt="DoeAki"></a>
+                        <a href="doacao.php"><img class="doeaki2" src="imagens/coracao.png" alt="DoeAki"></a>
                     </div>
                 </div>
         </div>
