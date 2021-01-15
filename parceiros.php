@@ -51,7 +51,7 @@
     </div>
     <div class="container">
         <div class="blocoPc1 row">
-            <div class="recode text-center container col mr-2"><img src="./imagens/logoRecode.png" alt="Recode">
+            <div class="recode text-center container mr-1 col"><img class="imgP" src="./imagens/logoRecode.png" alt="Recode">
                 <p>A Recode é uma organização social que promove o empoderamento digital.
                     Por meio da criação e disseminação de metodologias de formação empreendedora e do uso de ferramentas
                     digitais,
@@ -63,7 +63,7 @@
                     1,7
                     milhão de pessoas.</p>
             </div>
-            <div class="aacd container col mr-2"> <img src="./imagens/aacd.png" alt="Aacd">
+            <div class="aacd container mr-1 col"> <img class="imgP" src="./imagens/aacd.png" alt="Aacd">
                 <p>Hoje, a AACD é referência em sua área de atuação, resultado de uma trajetória marcada
                     pelo compromisso com a excelência e pela dedicação à causa das pessoas com deficiência física.
                     “Não se trata de fazer caridade ou filantropia,
@@ -71,7 +71,7 @@
                     como problema médico-social prioritário”
                 </p>
             </div>
-            <div class="lacre container col"><img src="./imagens/logoLacre.jpg" alt="Lacre">
+            <div class="lacre container col"><img class="imgP" src="./imagens/logoLacre.jpg" alt="Lacre">
                 <p>Em 2013, aos nove anos de idade, Julia Macedo,
                     começou a juntar lacres de latinhas de alumínio para comprar e doar uma cadeira de rodas.
                     Foi assim que surgiu o Lacre do Bem,
@@ -84,7 +84,7 @@
     </div>
     <div class="container">
         <div class="blocoPc2 row">
-            <div class="senac container col mr-2"><img src="./imagens/logoSenac.jpg" alt="senac">
+            <div class="senac container mr-1 col "><img class="imgP" src="./imagens/logoSenac.jpg" alt="senac">
                 <p>Desde 1946, o Serviço Nacional de Aprendizagem Comercial – Senac é o principal agente de educação
                     profissional voltado para o Comércio de Bens, Serviços e Turismo do País.
 
@@ -97,14 +97,14 @@
                     e permitem ao aluno planejar sua carreira profissional em uma perspectiva de educação continuada.
                 </p>
             </div>
-            <div class="cren container col mr-2"><img src="./imagens/logoCren.png" alt="Cren">
+            <div class="cren container mr-1 col"><img class="imgP" src="./imagens/logoCren.png" alt="Cren">
                 <p>O CREN é um centro de referência internacional na área de educação nutricional e no tratamento de
                     distúrbios nutricionais primários (subnutrição e obesidade).
                     É um lugar que comprova quanto bem um alguém é capaz quando suas pretensões não são excessivas e
                     irreais, quando o objetivo não é o cumprimento de um plano delimitado,
                     e sim favorecer a pessoa e ajudá-la em suas necessidades.</p>
             </div>
-            <div class="itau container col"> <img src="./imagens/logoItau.jpg" alt="Itaú">
+            <div class="itau container col"> <img class="imgP" src="./imagens/logoItau.jpg" alt="Itaú" >
                 <p>O Itaú Unibanco é a maior banco privado do Brasil, a maior instituição financeira da América Latina
                     e uma das maiores do mundo.
                     "Acreditamos que uma instituição financeira deve ajudar a realizar sonhos e investir em grandes
@@ -187,12 +187,12 @@
                         <p>CEP: 04870-90</p>
                         <p>Tel: (11) 4192-8681</p>
                     </div>
-                    <div class="botaoDoeaki2 col container mr-1 mb-1" style="background-color: rgba(203, 236, 247, 0.5);">
-                        <a href="doacao.php"><img class="doeaki2" src="imagens/coracao.png" alt="DoeAki"></a>
+                    <div class="botaoDoeaki2 col container" style=" background-color: rgba(203, 236, 247, 0.5); ">
+                        <a href="doacao.php"><img class="doeaki2" src="imagens/coracao.png"  alt="DoeAki" style="width: 60%;"></a>
                     </div>
                 </div>
         </div>
-        <div class="container row text-center" style="margin-top: 100px;">
+        <div class="container row text-center mt-1" >
             <div class="facebookInvisivel container col mr-1 mb-1" style="background-color: rgba(203, 236, 247, 0.5);">
                 <img src="imagens/facebook.svg" alt="Facebook">
                 <p>Facebook.com/DoekiOficial</p>

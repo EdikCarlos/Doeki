@@ -1,6 +1,6 @@
 
 body {
-    margin-right: 40px;
+    margin-right: 0px;
     margin-left: 100px;
     margin-top: 50px;
     background: url(background-div.png);
@@ -246,7 +246,7 @@ h3 {
 }
 
 .txtFormulario {
-    width: 500px;
+    width: 200px;
     margin: 30px auto 20px auto;
 }
 
@@ -273,7 +273,7 @@ h3 {
     display: inline-block;
 }
 
-.inputData, .inputTel {
+/* .inputData, .inputTel {
     background-color: lightblue;
     border-radius: 5px;
     height: 20px;
@@ -286,7 +286,9 @@ h3 {
     border-radius: 5px;
     height: 20px;
 
-}
+} */
+
+
 
 .conteinerForm .botaoEnviar {
     width: 500px;
@@ -553,6 +555,7 @@ h3 {
     font-family: 'Roboto Mono', monospace;
     background-color: rgba(203, 236, 247, 0.5);
     margin-right: 20px;
+    
 }
 .aacd{ 
     text-align: center;
@@ -632,7 +635,7 @@ h3 {
 
 .txtDoekiInvisivel {
     font-size: 15pt;
-    min-width: 350px;
+    min-width: 200px;
 }
 
 .enderecoInvisivel {
@@ -645,14 +648,14 @@ h3 {
 }
 
 .botaoDoeaki2 {
-    min-width: 400px;
+    min-width: 200px;
 }
 
 
 
 /* Fim Página Parceiros */
 
-@media only screen and (max-width : 1000px) {
+/* @media only screen and (min-width : 576px) {
     .fimParceiros, .finalDoacao, .finalSobre1, .fim{
         display: none;
     }
@@ -665,6 +668,59 @@ h3 {
 
   }
 
+  @media only screen and (min-width : 768px) {
+    .aacd {
+        color: rgba(160, 120, 247, 0.5); 
+    }
+   
+
+  }
+
+  @media only screen and (min-width : 992px) {
+    .aacd {
+        color: rgba(100, 236, 247, 0.5); 
+    }
+   
+
+  }
+
+  @media only screen and (min-width : 1200 px) {
+    .aacd {
+        color: rgba(212, 236, 129, 0.5); 
+    }
+   
+
+  }
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media only screen and (max-width : 1000px) {
+    .fimParceiros, .finalDoacao, .finalSobre1, .fim{
+        display: none;
+    }
+    .invisivelParceiros {
+        display: block;
+    }
+    .sobe {
+        margin-top: -260px;
+    }
+    .imgP {
+        max-width: 200px;
+    }
+
+  }
+
   @media only screen and (max-width : 500px) {
     .navbar {
         background-color:rgb(1, 19, 1);
@@ -672,3 +728,6 @@ h3 {
    
 
   }
+
+
+  

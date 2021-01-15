@@ -1,5 +1,6 @@
 <?php
-$link = mysqli_connect("localhost", "root", "", "cadastro");
+// $link = mysqli_connect("localhost", "root", "", "cadastro");
+$link = mysqli_connect("sql202.epizy.com", "epiz_27133760", "8XoIjZmXQh", "epiz_27133760_cadastro");
 if (!$link) {
     echo "<p> voce ja pode mexer MySQL</p>";
 }
@@ -100,7 +101,7 @@ $datos = $link->query($consulta);
             <input type="email" class="form-control" name="email" id="exampleFormControlInput1" placeholder="nome@exemplo.com">
         </div>
         <div class="form-group">
-            <label for="exampleFormControlTextarea1">Exemplo de textarea</label>
+            <label for="exampleFormControlTextarea1">Mensagem</label>
             <textarea class="form-control" name="descricao" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
         <input type="submit">

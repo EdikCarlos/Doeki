@@ -1,5 +1,6 @@
 <?php
-$link = mysqli_connect("localhost","root","","cadastro");
+// $link = mysqli_connect("localhost","root","","cadastro");
+$link = mysqli_connect("sql202.epizy.com", "epiz_27133760", "8XoIjZmXQh", "epiz_27133760_cadastro");
 
 if(!$link){
     die ("Error de conexão!").mysqli_connect_errno();      
@@ -22,7 +23,7 @@ if(isset($_POST['email']) && (isset($_POST['senha']) == isset($_POST['conf_senha
     echo "
         <script>
             alert('Cadastro efetuado!!')
-            window.location.href = '/www/DoekiOficial/inicio.php'
+            window.location.href = '/inicio.php'
         </script>
     ";
 }
