@@ -10,6 +10,7 @@ p {
     font-family: 'Roboto Mono', monospace;
 }
 
+
 h2{
     color: #34495E;
     text-align: center;
@@ -43,11 +44,13 @@ h3 {
 /*Inicio Menu da tela Home*/
 .menu1 {
     background-image: url(imagem2.png);
-    min-width: 600px;
+    min-width: 200px;
     height: 780px;
     background-size: 100%;
     background-repeat: no-repeat;
 }
+
+
 .drop {
     font-size: 30pt;
 }
@@ -139,6 +142,8 @@ h3 {
     text-align: left;
     
 }
+
+
 
 .enderecoEsq {
     text-align: left;
@@ -397,87 +402,87 @@ h3 {
     
 }
 
-.planejamento{
+/* .planejamento{
     width: 100%;
     height: 100%;
     display: inline-flex;
     justify-content: baseline ;
     align-items: baseline;
     
-}
+} */
 
-
+/* 
 .blocoMV{
     display: inline-block;
     align-items: flex-end;
-}
+} */
 .missao{
-    width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center ;
+    /* justify-content: center ; */
     align-items: baseline;
+    width: 600px;
   
 }
 .textoMissao{
-    width: 50%;
-    height: 50%;
+    /* width: 300px;
+    height: 150px;
     margin-top: 0px;
     border-radius:8px ;
-    padding: 10px;
+    padding: 10px; */
+    border-radius:8px ;
     font-family: 'Roboto Mono', monospace;
     background-color: rgba(203, 236, 247, 0.5);
 }
 .visao{
-    width:100%;
     height:100%;
     display: flex;
-    justify-content: center ;
+    /* justify-content: center ; */
     align-items: baseline;
+    width: 100px;
 }
 .textoVisao{
-    width: 50%;
-    height: 50%;
+    /* width: 300px;
+    height: 150px;
     margin-top: 0px;
     border-radius:8px ;
-    padding: 10px;
+    padding: 10px; */
+    border-radius:8px ;
     font-family: 'Roboto Mono', monospace;
     background-color: rgba(203, 236, 247, 0.5);
 }
-.blocoPVa{
+/* .blocoPVa{
     display: inline-block;
     align-items: flex-end;
-}
+} */
 .proposito{
-    width:100%;
     height:100%;
     display: flex;
-    justify-content: center ;
+    /* justify-content: center ; */
     align-items: baseline;
-    margin-bottom: 75px;
 }
 .textoProposito{
-    width: 50%;
-    height: 50%;
+    /* width: 200px;
+    height: 150px;
     margin-left: 30px;
     margin-top: 0px;
     border-radius:8px ;
-    padding: 10px;
+    padding: 10px; */
+    border-radius:8px ;
     font-family: 'Roboto Mono', monospace;
     background-color: rgba(203, 236, 247, 0.5);
 }.valores{
-    width:100%;
     height:100%;
     display: flex;
-    justify-content: center ;
+    /* justify-content: center ; */
     align-items: baseline;
 }
 .textoValores{
-    width: 50%;
-    height: 50%;
+    /* width: 300px;
+    height: 150px;
     margin-top: 0px;
+    padding: 10px; */
     border-radius:8px ;
-    padding: 10px;
     font-family: 'Roboto Mono', monospace;
     background-color: rgba(203, 236, 247, 0.5);
 }
@@ -712,22 +717,49 @@ h3 {
     .invisivelParceiros {
         display: block;
     }
-    .sobe {
-        margin-top: -260px;
-    }
     .imgP {
         max-width: 200px;
     }
-
-  }
-
-  @media only screen and (max-width : 500px) {
-    .navbar {
-        background-color:rgb(1, 19, 1);
+    .ods {
+        max-width: 200px;
     }
-   
+    .planEstrat {
+        max-width: 330px;
+    }
 
+    .menu1 {
+        height: 580px;
+        background-image: none;
+    }
+
+    .amigos {
+        display: none;
+    }
+
+    .txtPoder {
+        max-width: 250px;
+    }
+    .ods3 {
+        max-width: 200px;
+    }
   }
 
+  @media only screen and (max-width : 800px) {
+    .planEstrat {
+        max-width: 900px;
+    }
+    
+  }
 
+/* @media only screen and (min-width : 768px) {
+    
+    .menu1 {
+        background-image: url(imagem2.png);
+        min-width: 480px;
+        height: 780px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+}
+
+} */
   

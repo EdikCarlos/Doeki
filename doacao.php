@@ -17,7 +17,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <a href="inicio.php" class="mx-5 navbar-brand"><img class="logoDoacao" src="imagens/logoSimFundo.png" alt=""></a>
+                    <a href="inicio.php" class="mx-5 navbar-brand"><img class="logoDoacao" src="imagens/logoSimFundo.png" alt="" style="max-width: 200px;"></a>
                     <ul class="navbar-nav">
                         <li class="nav-item active">
                             <a class="text-dark nav-link" href="inicio.php"><span class="drop">H</span>ome</a>

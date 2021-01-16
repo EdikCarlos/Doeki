@@ -17,7 +17,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <a href="inicio.php" class="mx-5 navbar-brand"><img class="logoDoacao" src="imagens/logoSimFundo.png" alt=""></a>
+                    <a href="inicio.php" class="mx-5 navbar-brand"><img class="logoDoacao" src="imagens/logoSimFundo.png" alt="" style="max-width: 200px;"></a>
                     <ul class="navbar-nav">
                         <li class="nav-item active">
                             <a class="text-dark nav-link" href="inicio.php"><span class="drop">H</span>ome</a>
@@ -40,7 +40,7 @@
         </div>
     </div>
 
-    <section class="quemSomos container" style="min-width: 500px;">
+    <section class="quemSomos container" style="min-width: 200px;">
         <h2> Quem Somos</h2>
         <p class="textoQuemSomos container">
             Desenvolvemos esse projeto através de um programa realizado pela Recode uma organização social que
@@ -61,59 +61,50 @@
     </section>
     <hr class="divisoriaSobre bg-warning">
     <h2>Planejamento Estratégico</h2>
-    <section class="planejamento">
+    <section class="row text-center planEstrat" >
 
-        <div class="blocoMV row container">
-            <div>
-                <h3 class="h3Sobre"> Missão</h3>
-                <div class=" col container missao">
-                    <p class="textoMissao" style="min-width: 200px;">Levar ao mundo um espirito solidário e parceiro,
-                        promovendo a equidade e a
-                        empatia, além do respeito as diferenças.</p>
-                </div>
+            <h3 class="h3Sobre"> Missão</h3>
+            <div class=" col-sm-4 container missao">
+                <p class="textoMissao">Levar ao mundo um espirito solidário e parceiro,
+                    promovendo a equidade e a
+                    empatia, além do respeito as diferenças.</p>
+
             </div>
-            <div>
-                <h3 class="h3Sobre">Propósito</h3>
-                <div class=" col container proposito">
-                    <p class="textoProposito" style="min-width:200px;">Impulsionar o deficiente para uma qualidade de
-                        vida melhor.</p>
-                </div>
+
+            <h3 class="h3Sobre">Visão</h3>
+            <div class="col-sm-4 container visao">
+                <p class="textoVisao"> Criar uma ponte entre quem possui equipamentos e
+                    quem necessita , de forma
+                    simples, direta e segura.</p>
             </div>
-        </div>
-        <div class="blocoPVa row container">
-            <div>
-                <h3 class="h3Sobre">Visão</h3>
-                <div class="col container visao">
-                    <p class="textoVisao" style="min-width: 200px;"> Criar uma ponte entre quem possui equipamentos e
-                        quem necessita , de forma
-                        simples, direta e segura.</p>
-                </div>
+        
+            <h3 class="h3Sobre">Propósito</h3>
+            <div class=" col-sm-4 container proposito">
+                <p class="textoProposito">Impulsionar o deficiente para uma qualidade de
+                    vida melhor.</p>
+
             </div>
-            <div>
-                <h3 class="h3Sobre"> Valores</h3>
-                <div class="col container valores">
-                    <p class="textoValores" style="min-width: 200px;">Comprometimento, cooperação, empatia, ética,
-                        segurança, confiabilidade e
-                        mentalidade de transformação social.</p>
-                </div>
+
+            <h3 class="h3Sobre"> Valores</h3>
+            <div class="col-sm-4 container valores">
+                <p class="textoValores">Comprometimento, cooperação, empatia, ética,
+                    segurança, confiabilidade e
+                    mentalidade de transformação social.</p>
             </div>
-        </div>
 
     </section>
     <hr class="divisoriaSobre bg-warning">
-    <section class="ods container">
-        <h2>A Doeki atende às seguintes ODS:</h2>
-        <div class="ods1 row container-fluid" style="margin-left: 150px;margin-bottom: 20px;">
-            <a href="https://brasil.un.org/pt-br/sdgs/1" target="_blank"><img class="container col mt-1 mr-1 " src="./imagens/ODS1.png" alt="ODS1" style="width: 250px;"></a>
-            <a href="https://brasil.un.org/pt-br/sdgs/3" target="_blank"><img class="container col mt-1 mr-1" src="./imagens/ODS3.png" alt="ODS3" style="width: 250px;"></a>
-            <a href="https://brasil.un.org/pt-br/sdgs/10" target="_blank"><img class="container col mt-1 mr-1" src="./imagens/ODS10.png" alt="ODS10" style="width: 250px;"></a>
+    <h2>A Doeki atende principalmente a ODS:</h2>
+    <section class="ods container" style="text-align: center;">
+        <div>
+            <!-- <a href="https://brasil.un.org/pt-br/sdgs/1" target="_blank"><img class=" col mt-1 mr-1 " src="./imagens/ODS1.png" alt="ODS1" style="width: 250px;"></a> -->
+            <a href="https://brasil.un.org/pt-br/sdgs/3" target="_blank"><img class="ods3" src="./imagens/ODS3.png" alt="ODS3" style="width: 320px;"></a>
+            <!-- <a href="https://brasil.un.org/pt-br/sdgs/10" target="_blank"><img class=" col mt-1 mr-1" src="./imagens/ODS10.png" alt="ODS10" style="width: 250px;"></a> -->
+            <!-- <a href="https://brasil.un.org/pt-br/sdgs/11" target="_blank"><img class="col mt-1 mr-1" src="./imagens/ODS11.png" alt="ODS11" style="width: 250px;"></a> -->
+            <!-- <a href="https://brasil.un.org/pt-br/sdgs/12" target="_blank"><img class="col mt-1 mr-1" src="./imagens/ODS12.png" alt="ODS12" style="width: 250px;"></a> -->
         </div>
-        <div class="container-fluid row" style="margin-left:150px;">
-            <a href="https://brasil.un.org/pt-br/sdgs/11" target="_blank"><img class="container col mt-1 mr-1" src="./imagens/ODS11.png" alt="ODS11" style="width: 250px;"></a>
-            <a href="https://brasil.un.org/pt-br/sdgs/12" target="_blank"><img class="container col mt-1 mr-1" src="./imagens/ODS12.png" alt="ODS12" style="width: 250px;"></a>
-        </div>
-        <p class="saberMais container"><strong>Para saber mais sobre cada uma delas, clique na imagem que
-                desejar!</strong></p>
+        <p class="saberMais container"><strong>Para saber mais sobre essa ODS, clique na imagem acima.</strong></p>
+    </section>
         <hr class="bg-warning">
         <div class="container">
             <h2>Objetivos de desenvolvimento sustentável</h2>
@@ -128,9 +119,8 @@
             </p>
         </div>
         <div class="container text-center">
-            <a href="https://brasil.un.org/pt-br/sdgs" target="_blank"><img class="container" style="max-width: 900px;" src="imagens/odsCompleto.png" alt="Tabela-ODS"></a>
+            <a href="https://brasil.un.org/pt-br/sdgs" target="_blank"><img class="container mt-4" style="max-width: 900px;" src="imagens/odsCompleto.png" alt="Tabela-ODS"></a>
         </div>
-    </section>
     <div class="finalSobre1">
         <section class="fimSobre">
             <img src="estilos/imgFooter.svg" alt="BackGround-OndaAzul">
@@ -197,11 +187,11 @@
                         <p>Tel: (11) 4192-8681</p>
                     </div>
                     <div class="botaoDoeaki2 col container mr-1 mb-1" style="background-color: rgba(203, 236, 247, 0.5);">
-                        <a href="doacao.php"><img class="doeaki2" src="imagens/coracao.png" alt="DoeAki"></a>
+                        <a href="doacao.php"><img class="doeaki2" src="imagens/coracao.png" alt="DoeAki" style="width: 60%;"></a>
                     </div>
                 </div>
         </div>
-        <div class="container row text-center" style="margin-top: 100px;">
+        <div class="container row text-center">
             <div class="facebookInvisivel container col mr-1 mb-1" style="background-color: rgba(203, 236, 247, 0.5);">
                 <img src="imagens/facebook.svg" alt="Facebook">
                 <p>Facebook.com/DoekiOficial</p>

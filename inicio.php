@@ -19,23 +19,23 @@
                     <button class="navbar-toggler bg-info" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class=" titulos collapse navbar-collapse" id="navbarNav">
-                        <a href="inicio.php" class="mx-5 navbar-brand"><img class="logoDoacao" src="imagens/logoSimFundo.png" alt=""></a>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <a href="inicio.php" class="mx-5 navbar-brand"><img class="logoDoacao" src="imagens/logoSimFundo.png" alt="logoDoeki" style="max-width: 180px;"></a>
                         <ul class="navbar-nav">
                             <li class="nav-item active">
-                                <a class="text-light nav-link" href="inicio.php"><span class="drop">H</span>ome</a>
+                                <a class="text-primary nav-link" href="inicio.php"><span class="drop">H</span>ome</a>
                             </li>
                             <li class="nav-item">
-                                <a class="text-light nav-link" href="sobre.php"><span class="drop">S</span>obre</a>
+                                <a class="text-primary nav-link" href="sobre.php"><span class="drop">S</span>obre</a>
                             </li>
                             <li class="nav-item">
-                                <a class="text-light nav-link" href="doacao.php"><span class="drop">D</span>oação</a>
+                                <a class="text-primary nav-link" href="doacao.php"><span class="drop">D</span>oação</a>
                             </li>
                             <li class="nav-item">
-                                <a class="text-light nav-link" href="parceiros.php"><span class="drop">P</span>arceiros</a>
+                                <a class="text-primary nav-link" href="parceiros.php"><span class="drop">P</span>arceiros</a>
                             </li>
                             <li class="nav-item">
-                                <a class="text-light nav-link" href="depoimentos.php"><span class="drop">D</span>epoimentos</a>
+                                <a class="text-primary nav-link" href="depoimentos.php"><span class="drop">D</span>epoimentos</a>
                             </li>
                         </ul>
                     </div>
@@ -45,9 +45,9 @@
 
         <div class="sobe">
             <hr class="bg-warning">
-            <div class="resumoDoeki container row" style="margin-left: 50px;">
+            <div class="container row" style="margin-left: 30px;">
                 <h2 class="container text-center">Resumo da solução</h2>
-                <div class="txtResumo container col text-center" style="background-color: rgba(203, 236, 247, 0.5);min-width:300px;">
+                <div class="txtResumo container col text-center" style="background-color: rgba(203, 236, 247, 0.5);min-width:250px;">
                     <p>- Sabe aquele equipamento que está parado no cantinho da sua casa?</p>
                     <p>- Ele pode ser a solução para a mudança da vida de outra pessoa.</p>
                     <p>- Basta você se cadastrar em nosso site e iremos fazer a ponte entre você e a pessoa.</p>
@@ -58,14 +58,14 @@
                         iremos dar e receber.</p>
                 </div>
                 <div class="imgResumo container col">
-                    <img class="amigos container mt-1" src="imagens/cadeiranteAmigo.jpg" alt="Amigos" style="min-width:400px; width: 550px; height:400px;">
+                    <img class="amigos container mt-1" src="imagens/cadeiranteAmigo.jpg" alt="Amigos" style="max-width:570px;height:400px;">
                 </div>
             </div>
         </div>
         <hr class="bg-warning">
-        <div class="poderMudar container" style="margin-left: 50px;">
+        <div class="poderMudar container" style="text-align: center;">
             <h2>O poder de mudar uma vida!</h2>
-            <div class="txtPoder container mt-4">
+            <div class="txtPoder container mt-4" style="width: 1000px;" >
                 <p>Doar é muito mais que apenas entregar um item ou algum valor para outra pessoa, doar é colocar um
                     pouco
                     de você na vida de outra pessoa, é poder ser a oração encarnada daquela pessoa, é poder dar uma
@@ -73,13 +73,13 @@
                     precisa, você pode ser a diferença, doe!</p>
             </div>
             <div class="video1">
-                <iframe width="350" height="300" src="https://www.youtube.com/embed/TFqqA4m1u_c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="280" height="300" src="https://www.youtube.com/embed/TFqqA4m1u_c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="video2">
-                <iframe width="350" height="300" src="https://www.youtube.com/embed/aww32PsnHQI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="280" height="300"  src="https://www.youtube.com/embed/aww32PsnHQI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="video3">
-                <iframe width="350" height="300" src="https://www.youtube.com/embed/9KIedVj9Aoc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="280" height="300"  src="https://www.youtube.com/embed/9KIedVj9Aoc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
         <div class="fim">
@@ -150,11 +150,11 @@
                             <p>Tel: (11) 4192-8681</p>
                         </div>
                         <div class="botaoDoeaki2 col container mr-1 mb-1" style="background-color: rgba(203, 236, 247, 0.5);">
-                            <a href="doacao.php"><img class="doeaki2" src="imagens/coracao.png" alt="DoeAki"></a>
+                            <a href="doacao.php"><img class="doeaki2" src="imagens/coracao.png" alt="DoeAki" style="width: 60%;"></a>
                         </div>
                     </div>
             </div>
-            <div class="container row text-center" style="margin-top: 100px;">
+            <div class="container row text-center">
                 <div class="facebookInvisivel container col mr-1 mb-1" style="background-color: rgba(203, 236, 247, 0.5);">
                     <img src="imagens/facebook.svg" alt="Facebook">
                     <p>Facebook.com/DoekiOficial</p>
