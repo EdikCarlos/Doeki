@@ -710,7 +710,7 @@ h3 {
 
 
 
-  @media only screen and (max-width : 1000px) {
+  @media only screen and (max-width : 1100px) {
     .fimParceiros, .finalDoacao, .finalSobre1, .fim{
         display: none;
     }

@@ -1,16 +1,19 @@
 <?php
 
-// $link = mysqli_connect("localhost", "root", "", "cadastro");
+//  $link = mysqli_connect("localhost", "root", "", "doeki");
 $link = mysqli_connect("sql202.epizy.com", "epiz_27133760", "8XoIjZmXQh", "epiz_27133760_cadastro");
+
 if (!$link) {
     echo "<p> voce ja pode mexer MySQL</p>";
 }
-$consulta = "SELECT * FROM usuarios";
-$datos = $link->query($consulta);
+$doacoes = "SELECT d.id_doacoe AS numero, u.nome AS nome, u.email AS email,  d.data_nasc AS data, d.tel AS tel, d.endereco AS endereco, d.item AS item, d.tipo AS tipo
+FROM usuarios AS u INNER JOIN doacoes AS d";
+$datos = $link->query($doacoes);
+
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -29,7 +32,7 @@ $datos = $link->query($consulta);
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <a href="inicio.php" class="mx-5 navbar-brand"><img class="logoDoacao" src="imagens/logoSimFundo.png" alt=""></a>
+                    <a href="index.php" class="mx-5 navbar-brand"><img class="logoDoacao" src="imagens/logoSimFundo.png" alt=""></a>
                     <ul class="navbar-nav">
                         <li class="nav-item active">
                             <a class="text-dark nav-link" href="inicio.php"><span class="drop">H</span>ome</a>
@@ -57,15 +60,14 @@ $datos = $link->query($consulta);
         <table class="table">
             <thead>
                 <tr>
-                    <th scope="col">IdUsuario</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Sobrenome</th>
-                    <th scope="col">Data Nascimento</th>
-                    <th scope="col">Celular</th>
-                    <th scope="col">Endereço</th>
-                    <th scope="col">Item</th>
-                    <th scope="col">Tipo</th>
+                    <th scope="col">IdDoacoes</th>
+                    <th scope="col">nome</th>
+                    <th scope="col">email</th>
+                    <th scope="col">data nascimento</th>
+                    <th scope="col">tel</th>
+                    <th scope="col">endereco</th>
+                    <th scope="col">item</th>
+                    <th scope="col">tipo</th>
                 </tr>
             </thead>
             <tbody>
@@ -74,11 +76,10 @@ $datos = $link->query($consulta);
                 while ($fila = mysqli_fetch_array($datos)) {
                 ?>
                     <tr>
-                        <th scope="row"><?php echo $fila["usuario_id"]; ?></th>
-                        <td><?php echo $fila["email"]; ?></td>
+                        <th scope="row"><?php echo $fila["numero"]; ?></th>
                         <td><?php echo $fila["nome"]; ?></td>
-                        <td><?php echo $fila["sobrenome"]; ?></td>
-                        <td><?php echo $fila["data_nasc"]; ?></td>
+                        <td><?php echo $fila["email"]; ?></td>
+                        <td><?php echo $fila["data"]; ?></td>
                         <td><?php echo $fila["tel"]; ?></td>
                         <td><?php echo $fila["endereco"]; ?></td>
                         <td><?php echo $fila["item"]; ?></td>

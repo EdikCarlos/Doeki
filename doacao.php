@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+
+if (!isset($_SESSION['id_usuario'])) {
+    header('location: login.php');
+    exit;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -17,10 +28,10 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <a href="inicio.php" class="mx-5 navbar-brand"><img class="logoDoacao" src="imagens/logoSimFundo.png" alt="" style="max-width: 200px;"></a>
+                    <a href="index.php" class="mx-5 navbar-brand"><img class="logoDoacao" src="imagens/logoSimFundo.png" alt="" style="max-width: 200px;"></a>
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <a class="text-dark nav-link" href="inicio.php"><span class="drop">H</span>ome</a>
+                            <a class="text-dark nav-link" href="index.php"><span class="drop">H</span>ome</a>
                         </li>
                         <li class="nav-item">
                             <a class="text-dark nav-link" href="sobre.php"><span class="drop">S</span>obre</a>
@@ -69,73 +80,77 @@
 
         <h2 class="txtFormulario">Escolha uma opção para que nós possamos te ajudar ! =)</h2>
 
-        <form>
-            <div class="row mb-3">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">Email:</label>
-                <div class="col-sm-10">
-                    <input type="email" class="form-control" placeholder="E-mail" id="inputEmail3" style="background-color: lightblue;">
-                </div>
-            </div>
-            <div class="row mb-3">
+
+
+
+
+
+
+
+
+
+<!-- formulario -->
+        <form method="POST" action="Database/admDoador.php">
+        <div class="row mb-3">
                 <label for="inputPassword3" class="col-sm-2 col-form-label">Nome:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" placeholder="Nome" id="inputPassword3" style="background-color: lightblue;">
+                    <input type="text" class="form-control" value="<?php echo $_SESSION['nome']?>" placeholder="<?php echo $_SESSION['nome']?>" id="inputPassword3" style="background-color: lightblue;">
                 </div>
             </div>
             <div class="row mb-3">
-                <label for="inputPassword3" class="col-sm-2 col-form-label">Sobrenome:</label>
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Email:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" placeholder="Sobrenome" id="inputPassword3" style="background-color: lightblue;">
+                    <input type="email" class="form-control" value="<?php echo $_SESSION['email']?>" placeholder="<?php echo $_SESSION['email']?>" id="inputPassword3" style="background-color: lightblue;">
                 </div>
             </div>
             <div class="row mb-3">
                 <label for="inputPassword3" class="col-sm-2 col-form-label">Data de Nascimento:</label>
                 <div class="col-sm-3">
-                    <input type="date" class="form-control" id="inputPassword3" style="background-color: lightblue;">
+                    <input type="date" class="form-control" name="data_nasc" id="inputPassword3" style="background-color: lightblue;">
                 </div>
                 <label for="inputPassword3" class="col-sm-2 col-form-label">Telefone:</label>
                 <div class="col-sm-5">
-                    <input type="text" class="form-control" placeholder="Ex.(11)95675-4312" id="inputPassword3" style="background-color: lightblue;">
+                    <input type="text" class="form-control" name="tel" placeholder="Ex.(11)95675-4312" id="inputPassword3" style="background-color: lightblue;">
                 </div>
             </div>
             <div class="row mb-3">
                 <label for="inputPassword3" class="col-sm-2 col-form-label">Endereço:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" placeholder="Endereço" id="inputPassword3" style="background-color: lightblue;">
+                    <input type="text" class="form-control" name="endereco"  placeholder="Endereço" id="inputPassword3" style="background-color: lightblue;">
                 </div>
             </div>
-            <p>Qual é o item que você quer doar ou receber?(Se for um Parceiro não marque nada na caixa).</p>
-            <div class="row ">
+            <h5>Qual é o item que você quer doar ou receber? <br> (Se for um Parceiro não marque nada na caixa).</h5>
+            <div class="row my-4">
                 <div class=" col-sm-3 form-check">
-                    <input class="form-check-input" type="checkbox" name="gridRadios" id="gridRadios1" value="option1">
+                    <input class="form-check-input" type="checkbox" value="CadeiradeBanho"  id="gridRadios1" value="option1">
                     <label class="form-check-label" for="gridRadios1">
                         Cadeira de Banho
                     </label>
                 </div>
                 <div class=" col-sm-3 form-check">
-                    <input class="form-check-input" type="checkbox" name="gridRadios" id="gridRadios2" value="option2">
+                    <input class="form-check-input" type="checkbox" name="item" value="CadeiradeRodas" id="gridRadios2" value="option2">
                     <label class="form-check-label" for="gridRadios2">
                         Cadeira de Rodas
                     </label>
                 </div>
                 <div class=" col-sm-3 form-check">
-                    <input class="form-check-input" type="checkbox" name="gridRadios" id="gridRadios2" value="option2">
+                    <input class="form-check-input" type="checkbox" name="item" value="Muleta" id="gridRadios2" value="option2">
                     <label class="form-check-label" for="gridRadios2">
                         Muleta
                     </label>
                 </div>
                 <div class=" col-sm-3 form-check">
-                    <input class="form-check-input" type="checkbox" name="gridRadios" id="gridRadios2" value="option2">
+                    <input class="form-check-input" type="checkbox" name="item" value="Bengala" id="gridCheck1" value="option2">
                     <label class="form-check-label" for="gridRadios2">
                         Bengala
                     </label>
                 </div>
             </div>
-            <p class="mt-3">Escolha a opção que te representa!</p>
+            <h5 class="mt-5 mb-3">Escolha a opção que te representa!</h5>
             <div class="row mb-3">
                 <div class="col-sm-4 ">
                     <div class="form-check">
-                        <input class="form-check-input" name="tipo" type="radio" id="gridCheck1" checked>
+                        <input class="form-check-input"  type="radio" name="tipo" value="doador" id="gridCheck1" checked>
                         <label class="form-check-label" for="gridCheck1">
                             Doador
                         </label>
@@ -143,7 +158,7 @@
                 </div>
                 <div class="col-sm-4 ">
                     <div class="form-check">
-                        <input class="form-check-input" name="tipo" type="radio" id="gridCheck1">
+                        <input class="form-check-input"  type="radio" name="tipo" value="beneficiario" id="gridCheck1">
                         <label class="form-check-label" for="gridCheck1">
                             Beneficiário
                         </label>
@@ -159,48 +174,9 @@
                 </div>
             </div>
             <div class="row">
-                <button class="btn btn-warning col-lg-12" type="button">Enviar</button>
+                <input class="botaoEnviar btn btn-warning col-lg-12" name="submit" type="submit" href="/Doeki_backend/inicio.php">
             </div>
         </form>
-
-        <!-- <form method="POST" action="Database/admDoador.php">
-
-        <div class="conteinerForm">
-            <p>Email: </p>
-            <input class="inputNome" type="text" name="email">
-            <p>Nome: </p>
-            <input class="inputNome" type="text" name="nome">
-            <p>Sobrenome: </p>
-            <input class="inputSobrenome" type="text" name="sobrenome">
-            <div class="dataNasc">
-                <p>Data de Nascimento: </p>
-                <input class="inputData" type="date" name="data_nasc">
-            </div>
-            <div class="telefone">
-                <p>Número de telefone: </p>
-                <input class="inputTel" type="text" name="tel" placeholder="Apenas números">
-            </div>
-            <p>Endereço: </p>
-            <input class="inputEndereco" type="text" name="endereco">
-            <p>Qual é o item que você quer doar ou receber?</p>
-            <br>
-            <input class="check" type="checkbox" name="item" value="CadeiradeRodas">Cadeira de Rodas
-            <input class="check" type="checkbox" name="item" value="CadeiradeBanho">Cadeira de Banho
-            <input class="check" type="checkbox" name="item" value="Muleta">Muleta
-            <input class="check" type="checkbox" name="item" value="Bengala">Bengala
-            <br>  <br>
-            <p>Qual é o item que você quer doar ou receber?</p>
-            <br>
-            <div class="text-center">
-                <input type="radio" name="tipo" id="radioBeneficiario" value="beneficiario" checked>
-                <label for="beneficiario">Beneficiário</label>
-                <input type="radio" name="tipo" id="radioDoador" value="doador" style="margin-left: 20px;">
-                <label for="doador">Doador</label>   
-            </div>
-            
-            <br>
-            <input class="botaoEnviar" name="submit" type="submit" href="/Doeki_backend/inicio.php"> -->
-
         <div class="finalDoacao">
             <section class="fimDoacao">
                 <img src="estilos/imgFooter.svg" alt="BackGround-OndaAzul">

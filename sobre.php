@@ -17,10 +17,10 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <a href="inicio.php" class="mx-5 navbar-brand"><img class="logoDoacao" src="imagens/logoSimFundo.png" alt="" style="max-width: 200px;"></a>
+                    <a href="index.php" class="mx-5 navbar-brand"><img class="logoDoacao" src="imagens/logoSimFundo.png" alt="" style="max-width: 200px;"></a>
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <a class="text-dark nav-link" href="inicio.php"><span class="drop">H</span>ome</a>
+                            <a class="text-dark nav-link" href="index.php"><span class="drop">H</span>ome</a>
                         </li>
                         <li class="nav-item">
                             <a class="text-dark nav-link" href="sobre.php"><span class="drop">S</span>obre</a>

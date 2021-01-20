@@ -1,12 +1,14 @@
 <?php
-// $link = mysqli_connect("localhost", "root", "", "cadastro");
-$link = mysqli_connect("sql202.epizy.com", "epiz_27133760", "8XoIjZmXQh", "epiz_27133760_cadastro");
-if (!$link) {
-    echo "<p> voce ja pode mexer MySQL</p>";
-}
+session_start();
 
-$consulta = "SELECT * FROM testemunhos";
-$datos = $link->query($consulta);
+// $link = mysqli_connect("localhost", "root", "", "doeki");
+$link = mysqli_connect("sql202.epizy.com", "epiz_27133760", "8XoIjZmXQh", "epiz_27133760_cadastro");
+
+$usuario = $_SESSION['id_usuario'];
+$sql = "SELECT u.nome AS nome, c.descricao AS descricao FROM comentarios AS c INNER JOIN usuarios AS u WHERE c.id_usuario = $usuario";
+
+$datos = $link->query($sql);
+
 ?>
 
 <!DOCTYPE html>
@@ -28,10 +30,10 @@ $datos = $link->query($consulta);
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <a href="inicio.php" class="mx-5 navbar-brand"><img class="logoDoacao" src="imagens/logoSimFundo.png" alt=""></a>
+                    <a href="index.php" class="mx-5 navbar-brand"><img class="logoDoacao" src="imagens/logoSimFundo.png" alt=""></a>
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <a class="text-dark nav-link" href="inicio.php"><span class="drop">H</span>ome</a>
+                            <a class="text-dark nav-link" href="index.php"><span class="drop">H</span>ome</a>
                         </li>
                         <li class="nav-item">
                             <a class="text-dark nav-link" href="sobre.php"><span class="drop">S</span>obre</a>
@@ -89,16 +91,13 @@ $datos = $link->query($consulta);
     <div class="container text-primary my-4">
         <h4 class="text-center">DEIXE SEU DEPOIMENTO :</h4>
     </div>
-    <!-- <form action="./Database/testemunhos.php" method="post"> Chamndo na pasta do database-->
-    <form action="Database/testemunhos.php" method="post" class="container text-primary ">
+
+
+    <form action="comentarios.php" method="post" class="container text-primary ">
 
         <div class="form-group">
             <label for="Nome">Nome:</label>
-            <input type="text" class="form-control" name="nome" id="exampleFormControlInput1" placeholder="Digite seu nome">
-        </div>
-        <div class="form-group">
-            <label for="Email">Endereço de email</label>
-            <input type="email" class="form-control" name="email" id="exampleFormControlInput1" placeholder="nome@exemplo.com">
+            <input type="text" class="form-control" name="nome" id="exampleFormControlInput1" placeholder="<?php echo $_SESSION['nome']?>" >
         </div>
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Mensagem</label>
@@ -113,23 +112,27 @@ $datos = $link->query($consulta);
     <div class="container">
     <?php
     $con = 1;
-    while ($fila = mysqli_fetch_array($datos)) {
-    ?>
+    foreach ($datos as $dato) {
+        ?>
         <div class="container">
             <hr class="container bg-info">
             <hr class="container bg-info">
             <div>
                 <h6>Usuario : </h6>
-                <p><?php echo $fila["nome"]; ?></p>
+                <p><?php echo $dato["nome"]; ?></p>
             </div>
             <div>
                 <h6>Comentario : </h6>
-                <p><?php echo $fila["descricao"]; ?></p>
+                <p><?php echo $dato["descricao"]; ?></p>
+            </div>
+            <div class="row">
+            <form action="atualizar.php" method="post">
+                <input class="col-xm-5" type="text" name="descricao"> <button class=" col-xm-5 btn btn-warning" type="submit">Alterar Comentário</button>
+            </form>
+            <button class="btn btn-danger col-xm-2 ml-3" onclick="confirmar()">Deletar Comentario</button>
             </div>
         </div>
-
-    <?php $con = $con + 1;
-    } ?>
+    <?php } ?>
     <div class="container">
         <hr class="container bg-info">
         <hr class="container bg-info">
@@ -186,6 +189,16 @@ $datos = $link->query($consulta);
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <script>
+        function confirmar() {
+            let confirmacao = confirm("Você realmente deseja deletar o comentário?");
+
+            if(confirmacao == true){
+                location.href = "removeComentario.php?id_usuario=" + <?php echo $_SESSION["id_usuario"] ?>
+            }
+        }
+    </script
 </body>
 
 
