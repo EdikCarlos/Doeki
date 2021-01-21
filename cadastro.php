@@ -23,7 +23,7 @@
             </h4>
             <div class="form-group px-5">
                <label for="email">Nome:</label>
-               <input type="text" class="form-control" name="nome" id="email" aria-describedby="emailHelp" placeholder="Digite seu email" required>
+               <input type="text" class="form-control" name="nome" id="email" aria-describedby="emailHelp" placeholder="Digite seu nome" required>
 
             </div>
             <div class="form-group px-5">
@@ -40,7 +40,7 @@
                <input type="password" class="form-control" name="conf_senha" id="conf_senha" placeholder=" Confirme sua senha" required>
             </div>
             <div class="form-group px-5">
-                  <a href="login.php">Faz o login</a>
+                  <a href="login.php">Fazer login</a>
             </div>
             <div class="text-center">
                <button type="submit" class="btn btn-info">Enviar</button>

@@ -49,7 +49,7 @@
             Nosso projeto tem como objetivo resolver uma necessidade social através da tecnologia. No Brasil de
             acordo
             com o Censo de 2010 através do IBGE,
-            quase<b> 25 milhões de Brasileiros são deficientes, </b>cerca de 24% da população. <br><br>
+            quase<b> 45 milhões de Brasileiros são deficientes, </b>cerca de 24% da população. <br><br>
             Pensando nisso, elaboramos um website, visando à necessidade social voltada para as pessoas com
             deficiência
             física,
@@ -57,6 +57,7 @@
             muletas, bengalas,
             ou quaisquer outros tipos de acessórios para deficientes) sendo novos ou usados, porém em bom estado.
         </p>
+        Link: <a href="https://www2.camara.leg.br/atividade-legislativa/comissoes/comissoes-permanentes/cpd/arquivos/cinthia-ministerio-da-saude" target="_blank">https://www2.camara.leg.br/atividade-legislativa/comissoes/comissoes-permanentes/cpd/arquivos/cinthia-ministerio-da-saude</a>
 
     </section>
     <hr class="divisoriaSobre bg-warning">
