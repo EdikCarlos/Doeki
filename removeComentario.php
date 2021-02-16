@@ -7,8 +7,8 @@ $id_usuario = $_GET['id_usuario'];
 
 if ($id_usuario = $_SESSION['id_usuario']) {
 
-    // $conn = mysqli_connect("localhost", "root", "", "doeki");
-    $conn = mysqli_connect("sql202.epizy.com", "epiz_27133760", "8XoIjZmXQh", "epiz_27133760_cadastro");
+    $conn = mysqli_connect("localhost", "root", "", "doeki");
+    //$conn = mysqli_connect("sql202.epizy.com", "epiz_27133760", "8XoIjZmXQh", "epiz_27133760_cadastro");
 
     $result = $conn->query("DELETE FROM comentarios WHERE id_usuario = $id_usuario");
 

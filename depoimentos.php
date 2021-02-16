@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-// $link = mysqli_connect("localhost", "root", "", "doeki");
-$link = mysqli_connect("sql202.epizy.com", "epiz_27133760", "8XoIjZmXQh", "epiz_27133760_cadastro");
+$link = mysqli_connect("localhost", "root", "", "doeki");
+//$link = mysqli_connect("sql202.epizy.com", "epiz_27133760", "8XoIjZmXQh", "epiz_27133760_cadastro");
 
 $usuario = $_SESSION['id_usuario'];
 $sql = "SELECT u.nome AS nome, c.descricao AS descricao FROM comentarios AS c INNER JOIN usuarios AS u WHERE c.id_usuario = $usuario";

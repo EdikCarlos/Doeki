@@ -1,7 +1,7 @@
 <?php
 
-//  $link = mysqli_connect("localhost", "root", "", "doeki");
-$link = mysqli_connect("sql202.epizy.com", "epiz_27133760", "8XoIjZmXQh", "epiz_27133760_cadastro");
+$link = mysqli_connect("localhost", "root", "", "doeki");
+//$link = mysqli_connect("sql202.epizy.com", "epiz_27133760", "8XoIjZmXQh", "epiz_27133760_cadastro");
 
 if (!$link) {
     echo "<p> voce ja pode mexer MySQL</p>";

@@ -9,8 +9,8 @@ $conf_senha = $_POST['conf_senha'];
 if (strlen($nome) > 3 && strlen($email) > 3 && strlen($senha) > 3 && $senha == $conf_senha) {
     $senha_cripto = md5($senha);
 
-    // $conn = mysqli_connect("localhost", "root", "", "doeki");
-    $conn = mysqli_connect("sql202.epizy.com", "epiz_27133760", "8XoIjZmXQh", "epiz_27133760_cadastro");
+    $conn = mysqli_connect("localhost", "root", "", "doeki");
+    //$conn = mysqli_connect("sql202.epizy.com", "epiz_27133760", "8XoIjZmXQh", "epiz_27133760_cadastro");
 
     
 

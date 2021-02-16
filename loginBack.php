@@ -2,33 +2,40 @@
 
 session_start();
 
-$email = $_POST['email']; 
-$senha = $_POST['senha'];
+$conn = mysqli_connect("localhost", "root", "", "doeki");
 
-if (strlen($email) > 3 && strlen($senha) > 3) {
+if (isset($_POST['email']) && isset($_POST['senha'])) {
     
+    $email = mysqli_real_escape_string( $conn, $_POST['email'] ); 
+    $senha = mysqli_real_escape_string( $conn, $_POST['senha']);
     $senha_cripto = md5($senha);
 
-    // $conn = mysqli_connect("localhost", "root", "", "doeki");
-    $conn = mysqli_connect("sql202.epizy.com", "epiz_27133760", "8XoIjZmXQh", "epiz_27133760_cadastro");
+    //$conn = mysqli_connect("sql202.epizy.com", "epiz_27133760", "8XoIjZmXQh", "epiz_27133760_cadastro");
+
 
     // Execução da instrução SQL
-    $resultado_consulta = $conn->query("SELECT * from usuarios where email = '$email' AND senha = '$senha_cripto'");
+    $res_consulta = "SELECT * from usuarios where email = '$email' AND senha = '$senha_cripto' LIMIT 1";
 
-    // $usuarios = Retorno da consulta no banco de dados
-    $usuarios = mysqli_fetch_assoc($resultado_consulta);
+    $resultado_consulta = mysqli_query($conn, $res_consulta);
+    $resultado = mysqli_fetch_assoc($resultado_consulta);
 
-    $_SESSION['nome'] = $usuarios["nome"];
-    $_SESSION['email'] = $usuarios["email"];
-    $_SESSION['id_usuario'] = $usuarios["id_usuario"];
+    if(isset($resultado)){
+        
+        $_SESSION['id_usuario'] = $resultado['id_usuario'];
+        $_SESSION['nome'] = $resultado['nome'];
+        $_SESSION['niveis_acesso_id'] = $resultado['niveis_acesso_id'];
+        $_SESSION['email'] = $resultado['email'];
 
-    
-    header('Location: index.php');
-}else {
-    echo "
-        <script>
-            alert('E-mail ou senha inválidos!')
-            location.href = 'login.php'
-        </script>
-    ";
-}
+        if($_SESSION['niveis_acesso_id'] == "1"){
+            header("Location: index.php");
+        }elseif($_SESSION['niveis_acesso_id'] == "2"){
+            header("Location: doacao.php");
+        }else{
+            header("Location: sobre.php");
+        }
+
+    }else{
+        $_SESSION['loginErro'] = "Usuario ou senha Invalida";
+        header("Location: login.php");
+    }
+} 
