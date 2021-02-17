@@ -1,14 +1,13 @@
 <?php
+include_once("./Database/conexao.php");
 
-$link = mysqli_connect("localhost", "root", "", "doeki");
-//$link = mysqli_connect("sql202.epizy.com", "epiz_27133760", "8XoIjZmXQh", "epiz_27133760_cadastro");
-
-if (!$link) {
+if (!$conn) {
     echo "<p> voce ja pode mexer MySQL</p>";
 }
 $doacoes = "SELECT d.id_doacoe AS numero, u.nome AS nome, u.email AS email,  d.data_nasc AS data, d.tel AS tel, d.endereco AS endereco, d.item AS item, d.tipo AS tipo
-FROM usuarios AS u INNER JOIN doacoes AS d";
-$datos = $link->query($doacoes);
+FROM usuarios AS u JOIN doacoes AS d WHERE d.id_usuario = u.id_usuario";
+
+$datos = $conn->query($doacoes);
 
 ?>
 
@@ -73,17 +72,17 @@ $datos = $link->query($doacoes);
             <tbody>
 
                 <?php
-                while ($fila = mysqli_fetch_array($datos)) {
+                foreach ($datos as $dato) {
                 ?>
                     <tr>
-                        <th scope="row"><?php echo $fila["numero"]; ?></th>
-                        <td><?php echo $fila["nome"]; ?></td>
-                        <td><?php echo $fila["email"]; ?></td>
-                        <td><?php echo $fila["data"]; ?></td>
-                        <td><?php echo $fila["tel"]; ?></td>
-                        <td><?php echo $fila["endereco"]; ?></td>
-                        <td><?php echo $fila["item"]; ?></td>
-                        <td><?php echo $fila["tipo"]; ?></td>
+                        <th scope="row"><?php echo $dato["numero"]; ?></th>
+                        <td><?php echo $dato["nome"]; ?></td>
+                        <td><?php echo $dato["email"]; ?></td>
+                        <td><?php echo $dato["data"]; ?></td>
+                        <td><?php echo $dato["tel"]; ?></td>
+                        <td><?php echo $dato["endereco"]; ?></td>
+                        <td><?php echo $dato["item"]; ?></td>
+                        <td><?php echo $dato["tipo"]; ?></td>
                     </tr>
                 <?php } ?>
 

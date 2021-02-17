@@ -1,14 +1,11 @@
 <?php
 session_start();
-
-$link = mysqli_connect("localhost", "root", "", "doeki");
-//$link = mysqli_connect("sql202.epizy.com", "epiz_27133760", "8XoIjZmXQh", "epiz_27133760_cadastro");
-
-$usuario = $_SESSION['id_usuario'];
-$sql = "SELECT u.nome AS nome, c.descricao AS descricao FROM comentarios AS c INNER JOIN usuarios AS u WHERE c.id_usuario = $usuario";
-
-$datos = $link->query($sql);
-
+include_once("./Database/conexao.php");
+if(!isset($_SESSION['id_usuario'])){
+    header('Location: index.php');
+}else{
+    $depos = $conn->query("SELECT * FROM comentarios JOIN usuarios WHERE fk_usuario = id_usuario ORDER BY id_comentario DESC");
+}   
 ?>
 
 <!DOCTYPE html>
@@ -93,50 +90,53 @@ $datos = $link->query($sql);
     </div>
 
 
-    <form action="comentarios.php" method="post" class="container text-primary ">
+    <main class="container">
 
-        <div class="form-group">
-            <label for="Nome">Nome:</label>
-            <input type="text" class="form-control" name="nome" id="exampleFormControlInput1" placeholder="<?php echo $_SESSION['nome']?>" >
-        </div>
-        <div class="form-group">
-            <label for="exampleFormControlTextarea1">Mensagem</label>
-            <textarea class="form-control" name="descricao" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
-        <input type="submit">
-    </form>
+        <form class="container text-primary " action="comentarios.php" method="post">
+            <input class="col-9 form-control pl-3" type="text" name="post" placeholder="No que você está pensando, <?php echo $_SESSION['nome'] ?>?">
+            <button class="col-3 btn p-2 btn-danger m-2" type="submit">Publicar</button>
+        </form>
 
-    <div class="container text-center">
-        <h1>Comentarios</h1>
-    </div>
-    <div class="container">
-    <?php
-    $con = 1;
-    foreach ($datos as $dato) {
-        ?>
+
+
+        <div class="container text-center">
+            <h1>Comentarios</h1>
+        </div>
+        <div class="container">
+
+        <?php
+        foreach ($depos as $depo) {
+            ?>
+            <div class="container">
+                <hr class="container bg-info">
+                <hr class="container bg-info">
+                <div>
+                    <h6>Usuario : </h6>
+                    <h5 class="ml-3 mb-0" ><?php echo $depo["nome"]; ?></h5>
+                </div>
+                <div>
+                    <h6>Comentario : </h6>
+                    <p><?php echo $depo["descricao"]; ?></p>
+                </div>
+
+
+                <div class="row">
+                    <form action="atualizar.php" method="post">
+                        <input class="col-xm-5" type="text" name="descricao"> <button class=" col-xm-5 btn btn-warning" type="submit">Alterar Comentário</button>
+                    </form>
+                    
+                    <button class="btn btn-danger col-xm-2 ml-3" onclick="confirmar()">Deletar Comentario</button>
+                </div>
+
+            </div>
+        <?php } ?>
+
         <div class="container">
             <hr class="container bg-info">
             <hr class="container bg-info">
-            <div>
-                <h6>Usuario : </h6>
-                <p><?php echo $dato["nome"]; ?></p>
-            </div>
-            <div>
-                <h6>Comentario : </h6>
-                <p><?php echo $dato["descricao"]; ?></p>
-            </div>
-            <div class="row">
-            <form action="atualizar.php" method="post">
-                <input class="col-xm-5" type="text" name="descricao"> <button class=" col-xm-5 btn btn-warning" type="submit">Alterar Comentário</button>
-            </form>
-            <button class="btn btn-danger col-xm-2 ml-3" onclick="confirmar()">Deletar Comentario</button>
-            </div>
         </div>
-    <?php } ?>
-    <div class="container">
-        <hr class="container bg-info">
-        <hr class="container bg-info">
-    </div>
+    </main>
+    
     </div>
 
 

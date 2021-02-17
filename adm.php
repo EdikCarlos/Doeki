@@ -1,5 +1,7 @@
 <?php
 
+include_once("./Database/conexao.php");
+
 $nome = $_POST['nome'];
 $email = $_POST['email'];
 $senha = $_POST['senha'];
@@ -8,11 +10,6 @@ $conf_senha = $_POST['conf_senha'];
 
 if (strlen($nome) > 3 && strlen($email) > 3 && strlen($senha) > 3 && $senha == $conf_senha) {
     $senha_cripto = md5($senha);
-
-    $conn = mysqli_connect("localhost", "root", "", "doeki");
-    //$conn = mysqli_connect("sql202.epizy.com", "epiz_27133760", "8XoIjZmXQh", "epiz_27133760_cadastro");
-
-    
 
     $sql = "INSERT INTO usuarios (nome, email, senha) values ('$nome', '$email', '$senha_cripto')";
     $conn->query($sql);

@@ -2,15 +2,14 @@
 
 session_start();
 
-$conn = mysqli_connect("localhost", "root", "", "doeki");
+include_once("./Database/conexao.php");
+
 
 if (isset($_POST['email']) && isset($_POST['senha'])) {
     
     $email = mysqli_real_escape_string( $conn, $_POST['email'] ); 
     $senha = mysqli_real_escape_string( $conn, $_POST['senha']);
     $senha_cripto = md5($senha);
-
-    //$conn = mysqli_connect("sql202.epizy.com", "epiz_27133760", "8XoIjZmXQh", "epiz_27133760_cadastro");
 
 
     // Execução da instrução SQL
@@ -27,7 +26,7 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
         $_SESSION['email'] = $resultado['email'];
 
         if($_SESSION['niveis_acesso_id'] == "1"){
-            header("Location: index.php");
+            header("Location: formulario.php");
         }elseif($_SESSION['niveis_acesso_id'] == "2"){
             header("Location: doacao.php");
         }else{

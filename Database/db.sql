@@ -61,11 +61,13 @@ select * from doacoes;
 
 create table comentarios (
 id_comentario int auto_increment primary key,
-id_usuario INT NOT NULL,
+fk_usuario INT NOT NULL,
 descricao varchar(300) not null,
 data DATETIME DEFAULT NOW(),
-FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario)
+FOREIGN KEY (fk_usuario) REFERENCES usuarios(id_usuario)
 );
+
+DELETE FROM comentarios WHERE fk_usuario = $id_usuario AND id_comentario = $id_comentario
 
 INSERT INTO comentarios VALUES ('default', 1, 'O site esta PRO mesmo', 'default');
 
@@ -83,3 +85,7 @@ SELECT email from usuarios where senha = '827ccb0eea8a706c4c34a16891f84e7b'
 DROP TABLE usuarios;
 DROP TABLE doacoes;
 DROP TABLE comentarios;
+
+
+SELECT d.id_doacoe AS numero, u.nome AS nome, u.email AS email,  d.data_nasc AS data, d.tel AS tel, d.endereco AS endereco, d.item AS item, d.tipo AS tipo
+FROM usuarios AS u JOIN doacoes AS d WHERE d.id_usuario = u.id_usuario

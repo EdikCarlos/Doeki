@@ -1,6 +1,9 @@
 <?php
 
 session_start();
+
+include_once("../Database/conexao.php");
+
 $id_usuario = $_SESSION['id_usuario'];
 $data_nasc = $_POST['data_nasc'];
 $tel = $_POST['tel'];
@@ -10,12 +13,9 @@ $tipo = $_POST['tipo'];
 
 if(strlen($tel) > 5 && strlen($endereco) > 3 && isset($_POST['item']) && isset($_POST['tipo']) ){
 
-    $link = mysqli_connect("localhost", "root", "", "doeki");
-    //$link = mysqli_connect("sql202.epizy.com", "epiz_27133760", "8XoIjZmXQh", "epiz_27133760_cadastro");
-
     $sql = "INSERT INTO doacoes (id_usuario, data_nasc, tel, endereco, item, tipo)
             VALUES ('$id_usuario','$data_nasc', '$tel', '$endereco', '$item', '$tipo')";
-    $link->query($sql);
+    $conn->query($sql);
 
     echo "
         <script>

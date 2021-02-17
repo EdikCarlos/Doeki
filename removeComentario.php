@@ -2,15 +2,15 @@
 
 session_start();
 
+include_once("./Database/conexao.php");
+
 $id_usuario = $_GET['id_usuario'];
+$id_comentario = $_SESSION['id_comentario'];
 
 
 if ($id_usuario = $_SESSION['id_usuario']) {
 
-    $conn = mysqli_connect("localhost", "root", "", "doeki");
-    //$conn = mysqli_connect("sql202.epizy.com", "epiz_27133760", "8XoIjZmXQh", "epiz_27133760_cadastro");
-
-    $result = $conn->query("DELETE FROM comentarios WHERE id_usuario = $id_usuario");
+    $result = $conn->query("DELETE FROM comentarios WHERE fk_usuario = $id_usuario");
 
 
     if ($result == true) {
