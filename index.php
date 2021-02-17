@@ -23,7 +23,6 @@ if (!isset($_SESSION['id_usuario'])) {
     
     <div class=" menu1 container-fluid">
             <div class="container-fluid">
-                <a href="formulario.php" style="text-decoration: none; margin-left:30px;" class="text-white">*</a>
                 <nav class="navbar navbar-expand-md navbar-light mt-1 mb-4" style="width: 100%;">
                     <button class="navbar-toggler bg-info" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
                         <span class="navbar-toggler-icon"></span>

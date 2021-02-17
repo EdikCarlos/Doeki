@@ -1,3 +1,8 @@
+
+<?php
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -34,12 +39,31 @@
             </div>
             <div class="form-group px-5">
                   <a href="cadastro.php">Faça seu cadastro</a>
+                  
             </div>
             <div class="text-center">
                <button type="submit" class="btn btn-info">Entrar</button>
             </div>
+            <p class="text-center text-danger">
+               <?php
+                  if(isset($_SESSION['loginErro'])){
+                     echo $_SESSION['loginErro'];
+                     unset($_SESSION['loginErro']);
+                  }
+               ?>
+            </p>
+            <p class="text-center text-danger">
+               <?php
+                  if(isset($_SESSION['logindeslogado'])){
+                     echo $_SESSION['logindeslogado'];
+                     unset($_SESSION['logindeslogado']);
+                  }
+               ?>
+            </p>
+         </form>
+
       </div>
-      </form>
+
       <div class="container-fluid col-3" style="margin-left: 30px;">
          <div class="container text-center" style="margin:40px auto 100px 50px;">
             <button class="btn btn-info btn-block" style="width:300px;height:60px;"> <a href="sobre.php" class="text-white" style="text-decoration: none;">Venha nos conhecer!</a></button>
