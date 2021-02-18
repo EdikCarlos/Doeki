@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include_once("./Database/conexao.php");
+include_once("conexao.php");
 
 
 if (!$conn) {
@@ -18,7 +18,7 @@ if ((isset($_POST['descricao']))) {
     echo "
         <script>
             alert('Voce alterou seu comentario')
-            window.location.href ='depoimentos.php'
+            window.location.href ='../depoimentos.php'
         </script>
     ";
     

@@ -17,20 +17,28 @@ if (!isset($_SESSION['id_usuario'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doeki | Doação</title>
     <link rel="stylesheet" href="estilos/estilo.css">
+    <link rel="stylesheet" href="estilos/botao.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 
 <body>
 
 
-        <nav class="navbar navbar-light bg-info">
-            <div class="navIntro d-flex ">
+        <nav class="navbar navbar-light bg-info d-flex justify-content-between fixed-top">
+            <div class="navIntro d-flex">
                 <h5 class="bg-warning p-2 rounded">Bem-Vindo (a) <strong><?php echo $_SESSION['nome']?></strong></h5>   
             </div>
-            <div  class="navIntro d-flex ">             
-                <a class="text-dark" href="sair.php"><h6 class="bg-warning ml-5 p-2 rounded"><strong>Sair</strong></h6></a>
+            <div class="navIntro mb-5 ">
+                    <strong>
+                        <a href="#" class="btn btn-white btn-animate btn-lg">DOAR</a>
+                    </strong>
+            </div>
+            <div  class="navIntro d-flex">             
+                <a class="text-dark" href="Database/sair.php"><h6 class="bg-warning ml-5 p-2 rounded"><strong>Sair</strong></h6></a>
             </div>
         </nav>
+
+        
     <?php
         require('./frontend/components/Header.php');
     ?>
@@ -166,11 +174,11 @@ if (!isset($_SESSION['id_usuario'])) {
     </div>
 
 
+<hr>
 
-
-        <div>
+        <div style="margin-left: -194px; margin-right: -194px">
             <?php
-                            require('./frontend/components/Footer.php')
+                require('./frontend/components/Footer.php')
             ?>
         </div>
 

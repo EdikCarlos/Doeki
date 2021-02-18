@@ -22,25 +22,32 @@ if (!isset($_SESSION['id_usuario'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="./estilos/estilo.css">
+    <link rel="stylesheet" href="estilos/botao.css">
     <title>Depoimentos</title>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-light bg-info">
-        <div class="navIntro d-flex ">
-            <h5 class="bg-warning p-2 rounded">Bem-Vindo (a) <strong><?php echo $_SESSION['nome']?></strong></h5>   
-        </div>
-        <div  class="navIntro d-flex ">             
-            <a class="text-dark" href="sair.php"><h6 class="bg-warning ml-5 p-2 rounded"><strong>Sair</strong></h6></a>
-        </div>
-    </nav>
+        <nav class="navbar navbar-light bg-info d-flex justify-content-between fixed-top">
+            <div class="navIntro d-flex">
+                <h5 class="bg-warning p-2 rounded">Bem-Vindo (a) <strong><?php echo $_SESSION['nome']?></strong></h5>   
+            </div>
+            <div class="navIntro mb-5 ">
+                    <strong>
+                        <a href="#" class="btn btn-white btn-animate btn-lg">DOAR</a>
+                    </strong>
+            </div>
+            <div  class="navIntro d-flex">             
+                <a class="text-dark" href="Database/sair.php"><h6 class="bg-warning ml-5 p-2 rounded"><strong>Sair</strong></h6></a>
+            </div>
+        </nav>
+
     
     <?php
         require('./frontend/components/Header.php');
     ?>
-
-    <div class="row">
+    <div class="container">
+        <div class="row">
             <div class="testemunho container col">
                 <img src="./imagens/AmigoCadeira.png" alt="">
                 <h4>Depoimento: Juan Garcia</h4>
@@ -56,8 +63,8 @@ if (!isset($_SESSION['id_usuario'])) {
                 <h4>Depoimento: Mariana Pereira</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, deleniti facere amet ut sunt corporis beatae similique explicabo, odit hic, et magni rem. Necessitatibus deleniti explicabo fuga, voluptates neque odit?</p>
             </div>
-    </div>
-    <div class="row">
+        </div>
+        <div class="row">
             <div class="testemunho container col">
                 <img src="./imagens/amigo3.png" alt="">
                 <h4>Depoimento: Márcio Silva</h4>
@@ -73,6 +80,8 @@ if (!isset($_SESSION['id_usuario'])) {
                 <h4>Depoimento: Sebastião Ferreira</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, deleniti facere amet ut sunt corporis beatae similique explicabo, odit hic, et magni rem. Necessitatibus deleniti explicabo fuga, voluptates neque odit?</p>
             </div>
+        </div>
+
     </div>
 
     <div class="container text-primary my-4">
@@ -82,12 +91,12 @@ if (!isset($_SESSION['id_usuario'])) {
 
     <main class="container">
 
-        <form class="container text-primary " action="comentarios.php" method="post">
-            <input class="col-9 form-control pl-3" type="text" name="post" placeholder="No que você está pensando, <?php echo $_SESSION['nome'] ?>?">
-            <button class="col-3 btn p-2 btn-danger m-2" type="submit">Publicar</button>
-        </form>
-
-
+        <div class=container>
+            <form class="container text-primary row" action="comentarios.php" method="post">
+                    <input class="col-9 form-control pl-3" type="text" name="post" placeholder="No que você está pensando, <?php echo $_SESSION['nome'] ?>?">
+                    <button class="col-2 btn p-2 btn-success ml-2" type="submit">Publicar</button>
+                </form>
+        </div>
 
         <div class="container text-center">
             <h1>Comentarios</h1>
@@ -112,7 +121,7 @@ if (!isset($_SESSION['id_usuario'])) {
 
 
                 <div class="row">
-                    <form action="atualizar.php" method="post">
+                    <form action="Database/atualizar.php" method="post">
                         <input class="col-xm-5" type="text" name="descricao"> <button class=" col-xm-5 btn btn-warning" type="submit">Alterar Comentário</button>
                     </form>
                     
@@ -145,7 +154,7 @@ if (!isset($_SESSION['id_usuario'])) {
             let confirmacao = confirm("Você realmente deseja deletar o comentário?");
 
             if(confirmacao == true){
-                location.href = "removeComentario.php?id_usuario=" + <?php echo $_SESSION["id_usuario"] ?>
+                location.href = "Database/removeComentario.php?id_usuario=" + <?php echo $_SESSION["id_usuario"] ?>
             }
         }
     </script

@@ -12,6 +12,6 @@ session_start();
 
     $_SESSION['logindeslogado'] = "Deslogado com sucesso";
 
-    header("location: login.php");
+    header("location: ../login.php");
 ?>
 
