@@ -1,6 +1,6 @@
 <?php
 
-include_once("./Database/conexao.php");
+include_once("../Database/conexao.php");
 
 $nome = $_POST['nome'];
 $email = $_POST['email'];
@@ -16,7 +16,7 @@ if (strlen($nome) > 3 && strlen($email) > 3 && strlen($senha) > 3 && $senha == $
 
     echo "<script>
             alert('Cadastro efetuado!')
-            window.location.href = 'login.php'
+            window.location.href = '../login.php'
         </script>
         ";
 }

@@ -64,7 +64,8 @@ if (!isset($_SESSION['id_usuario'])) {
 
 
 <!-- formulario -->
-        <form method="POST" action="Database/admDoador.php">
+    <div class="container">
+    <form method="POST" action="Database/admDoador.php">
         <div class="row mb-3">
                 <label for="inputPassword3" class="col-sm-2 col-form-label">Nome:</label>
                 <div class="col-sm-10">
@@ -152,100 +153,14 @@ if (!isset($_SESSION['id_usuario'])) {
                 <input class="botaoEnviar btn btn-warning col-lg-12" name="submit" type="submit" href="/Doeki_backend/inicio.php">
             </div>
         </form>
-        <div class="finalDoacao">
-            <section class="fimDoacao">
-                <img src="estilos/imgFooter.svg" alt="BackGround-OndaAzul">
-                <div class="txtDoeki">
-                    <h3>Doeki</h3>
-                    <p>Doar é muito mais que apenas entregar um item ou algum valor para outra pessoa, doar é colocar um
-                        pouco de você na vida de outra pessoa, é poder ser a oração encarnada daquela pessoa, é poder dar
-                        uma esperança de mudança, dar um futuro, pequenas atitudes para nós são grandes realizações para
-                        quem precisa, você pode ser a diferença, doe!</p>
-                </div>
-                <div class="endereco">
-                    <h3 class="enderecoEsq">Endereço</h3>
-                    <p>Rua Araújo, 355</p>
-                    <p>Parque São Felipe</p>
-                    <p>CEP: 04870-90</p>
-                    <p>Tel: (11) 4192-8681</p>
-                </div>
-                <div class="botaoDoeaki">
-                    <a href="doacao.php"><img class="doeaki" src="imagens/coracao.png" alt="DoeAki"></a>
-                </div>
-                <div class="facebook">
-                    <img src="imagens/facebook.svg" alt="Facebook">
-                    <p>Facebook.com/DoekiOficial</p>
-                </div>
-                <div class="insta">
-                    <img src="imagens/instagram.svg" alt="Instagram">
-                    <p>Instagram.com/DoekiOficial</p>
-                </div>
-                <div class="email mb-3">
-                    <img src="imagens/gmail.svg" alt="Gmail">
-                    <p>DoekiOficial@gmail.com</p>
-                </div>
-                <div class="whatsapp mb-3">
-                    <img src="imagens/whatsapp 3.svg" alt="Whatsapp">
-                    <p>(11) 97766-5544</p>
-                </div>
-                <hr class="bg-warning">
-                <p>&copy;Doeki</p>
-            </section>
-        </div>
+    </div>
 
-
-        <div class="container invisivelParceiros">
-            <div class="finalSobre">
-                <section class="fimInvisivel">
-                    <hr class="bg-warning">
-                    <div class="container row" style="margin-top: 150px;">
-                        <div class="txtDoekiInvisivel col container mr-1 mb-1" style="background-color: rgba(203, 236, 247, 0.5);">
-                            <h3>Doeki</h3>
-                            <p>Doar é muito mais que apenas entregar um item ou algum valor para outra pessoa, doar é
-                                colocar um
-                                pouco de você na vida de outra pessoa, é poder ser a oração encarnada daquela pessoa, é
-                                poder dar
-                                uma esperança de mudança, dar um futuro, pequenas atitudes para nós são grandes
-                                realizações
-                                para
-                                quem precisa, você pode ser a diferença, doe!</p>
-                        </div>
-                        <div class="enderecoInvisivel col container mr-1 mb-1" style="background-color: rgba(203, 236, 247, 0.5);">
-                            <h3 class="enderecoEsq2">Endereço</h3>
-                            <p>Rua Araújo, 355</p>
-                            <p>Parque São Felipe</p>
-                            <p>CEP: 04870-90</p>
-                            <p>Tel: (11) 4192-8681</p>
-                        </div>
-                        <div class="botaoDoeaki2 col container" style=" background-color: rgba(203, 236, 247, 0.5); ">
-                            <a href="doacao.php"><img class="doeaki2" src="imagens/coracao.png" alt="DoeAki" style="width: 60%;"></a>
-                        </div>
-                    </div>
-            </div>
-            <div class="container row text-center mt-1">
-                <div class="facebookInvisivel container col mr-1 mb-1" style="background-color: rgba(203, 236, 247, 0.5);">
-                    <img src="imagens/facebook.svg" alt="Facebook">
-                    <p>Facebook.com/DoekiOficial</p>
-                </div>
-                <div class="instaInvisivel container col mr-1 mb-1" style="background-color: rgba(203, 236, 247, 0.5);">
-                    <img src="imagens/instagram.svg" alt="Instagram">
-                    <p>Instagram.com/DoekiOficial</p>
-                </div>
-                <div class="emailInvisivel container col mr-1 mb-1" style="background-color: rgba(203, 236, 247, 0.5);">
-                    <img src="imagens/gmail.svg" alt="Gmail">
-                    <p>DoekiOficial@gmail.com</p>
-                </div>
-                <div class="whatsappInvisivel container col mr-1 mb-1" style="background-color: rgba(203, 236, 247, 0.5);">
-                    <img src="imagens/whatsapp 3.svg" alt="Whatsapp">
-                    <p>(11) 97766-5544</p>
-                </div>
-            </div>
-            <div class="container text-center">
-                <hr class="bg-warning">
-                <p>&copy;Doeki</p>
-                </section>
-            </div>
-        </div>
+    <div class="container w-100">
+        <?php
+                    require('./frontend/components/Footer.php')
+        ?>
+    </div>
+        
 
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

@@ -17,7 +17,7 @@
    <div class="container row">
       <div class="container col bg-info" style="height: 635px;">
          <form class="container border border-light rounded 
-               shadow  bg-white rounded " method="POST" action="adm.php" style="width: 380px; height:500px;margin-top: 100px;">
+               shadow  bg-white rounded " method="POST" action="Database/adm.php" style="width: 380px; height:500px;margin-top: 100px;">
             <h4 class="tituloForm text-center mt-4">
                Cadastre-se Aqui!
             </h4>

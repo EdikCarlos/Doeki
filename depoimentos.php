@@ -128,53 +128,10 @@ if (!isset($_SESSION['id_usuario'])) {
     </main>
     
     </div>
-
-
-
-
-    <div class="fim col container-fluid" style="width: 100%; margin-left:-150px; margin-top:-1900px;">
-        <section class="fimPagina">
-            <img src="estilos/imgFooter.svg" alt="BackGround-OndaAzul">
-            <div class="txtDoeki">
-                <h3>Doeki</h3>
-                <p>Doar é muito mais que apenas entregar um item ou algum valor para outra pessoa, doar é colocar um
-                    pouco de você na vida de outra pessoa, é poder ser a oração encarnada daquela pessoa, é poder
-                    dar
-                    uma esperança de mudança, dar um futuro, pequenas atitudes para nós são grandes realizações para
-                    quem precisa, você pode ser a diferença, doe!</p>
-            </div>
-            <div class="endereco">
-                <h3 class="enderecoEsq">Endereço</h3>
-                <p>Rua Araújo, 355</p>
-                <p>Parque São Felipe</p>
-                <p>CEP: 04870-90</p>
-                <p>Tel: (11) 4192-8681</p>
-            </div>
-            <div class="botaoDoeaki">
-                <a href="doacao.php"><img class="doeaki" src="imagens/coracao.png" alt="DoeAki"></a>
-            </div>
-            <div class="facebook">
-                <img src="imagens/facebook.svg" alt="Facebook">
-                <p>Facebook.com/DoekiOficial</p>
-            </div>
-            <div class="insta">
-                <img src="imagens/instagram.svg" alt="Instagram">
-                <p>Instagram.com/DoekiOficial</p>
-            </div>
-            <div class="email">
-                <img src="imagens/gmail.svg" alt="Gmail">
-                <p>DoekiOficial@gmail.com</p>
-            </div>
-            <div class="whatsapp">
-                <img src="imagens/whatsapp 3.svg" alt="Whatsapp">
-                <p>(11) 97766-5544</p>
-            </div>
-            <hr class="bg-warning">
-            <p>&copy;Doeki</p>
-        </section>
-    </div>
-
-
+     
+    <?php
+            require('./frontend/components/Footer.php')
+    ?>
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
