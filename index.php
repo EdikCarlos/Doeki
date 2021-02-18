@@ -20,42 +20,19 @@ if (!isset($_SESSION['id_usuario'])) {
 
 <body>
     <div>
-    
-    <div class=" menu1 container-fluid">
-            <div class="container-fluid">
-                <nav class="navbar navbar-expand-md navbar-light mt-1 mb-4" style="width: 100%;">
-                    <button class="navbar-toggler bg-info" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <a href="index.php" class="mx-5 navbar-brand"><img class="logoDoacao" src="imagens/logoSimFundo.png" alt="logoDoeki" style="max-width: 180px;"></a>
-                        <ul class="navbar-nav">
-                            <li class="nav-item active">
-                                <a class="text-primary nav-link" href="index.php"><span class="drop">H</span>ome</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="text-primary nav-link" href="sobre.php"><span class="drop">S</span>obre</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="text-primary nav-link" href="doacao.php"><span class="drop">D</span>oação</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="text-primary nav-link" href="parceiros.php"><span class="drop">P</span>arceiros</a>
-                            </li>
-                            <li class="nav-item pr-5">
-                                <a class="text-primary nav-link" href="depoimentos.php"><span class="drop">D</span>epoimentos</a>
-                            </li>
-                            <li class="nav-item text-primary">
-                               <h5 class="ml-3 mb-0 pl-5 mt-4 text-white">Bem vindo, <?php echo $_SESSION['nome'] ?></h5>
-                            </li>
-                            <li class="nav-item text-primary pl-3 mt-4">
-                            <a class="py-2 text-white h4" href="sair.php" >Sair</a>
-                            </li>
-                        </ul>
-                    </div>
-                </nav>
-            </div>
+    <nav class="navbar navbar-light bg-info">
+        <div class="navIntro d-flex ">
+            <h5 class="bg-warning p-2 rounded">Bem-Vindo (a) <strong><?php echo $_SESSION['nome']?></strong></h5>   
         </div>
+        <div  class="navIntro d-flex ">             
+            <a class="text-dark" href="sair.php"><h6 class="bg-warning ml-5 p-2 rounded"><strong>Sair</strong></h6></a>
+        </div>
+    </nav>
+
+        <?php
+        require('./frontend/components/Header.php');
+        ?>
+   
         <div class="sobe">
             <hr class="bg-warning">
             <div class="container row" style="margin-left: 30px;">
