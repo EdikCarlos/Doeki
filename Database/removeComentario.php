@@ -2,11 +2,9 @@
 
 session_start();
 
-include_once("./Database/conexao.php");
+include_once("conexao.php");
 
 $id_usuario = $_GET['id_usuario'];
-$id_comentario = $_SESSION['id_comentario'];
-
 
 if ($id_usuario = $_SESSION['id_usuario']) {
 
@@ -18,14 +16,14 @@ if ($id_usuario = $_SESSION['id_usuario']) {
         echo "
             <script>
                 alert('Comentario excluído com sucesso!')
-                window.location.href = 'depoimentos.php'
+                window.location.href = '../depoimentos.php'
             </script>
             ";
     } else {
         echo "
                 <script>
                     alert('Não foi possível Deletar o comentario!')
-                    window.location.href = 'depoimentos.php'
+                    window.location.href = '../depoimentos.php'
                 </script>
             ";
     }
@@ -34,7 +32,7 @@ if ($id_usuario = $_SESSION['id_usuario']) {
     echo "
                 <script>
                     alert('Não foi possível Deletar o comentario!')
-                    window.location.href = 'index.php'
+                    window.location.href = '../index.php'
                 </script>
             ";
 }

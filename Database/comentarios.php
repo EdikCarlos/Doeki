@@ -2,7 +2,7 @@
 
 session_start();
 
-include_once("./Database/conexao.php");
+include_once("conexao.php");
 
 $comentario = $_POST['post'];
 $id = $_SESSION['id_usuario'];
@@ -19,14 +19,14 @@ if (strlen($comentario) > 0) {
         echo "
             <script>
                 alert('Voce é legal mesmo')
-                location.href = 'depoimentos.php'
+                location.href = '../depoimentos.php'
             </script>
         ";
     }else{
         echo "
                 <script>
                     alert('Não foi possível cadastrar a postagem!')
-                    window.location.href ='depoimentos.php' 
+                    window.location.href ='../depoimentos.php' 
                 </script>
             ";
     } 
@@ -34,7 +34,7 @@ if (strlen($comentario) > 0) {
     echo "
         <script>
             alert('Digite algo para postar!')
-            location.href = 'depoimentos.php'
+            location.href = '../depoimentos.php'
         </script>
     ";
 }

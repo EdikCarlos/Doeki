@@ -2,7 +2,7 @@
 
 session_start();
 
-include_once("./Database/conexao.php");
+include_once("conexao.php");
 
 
 if (isset($_POST['email']) && isset($_POST['senha'])) {
@@ -26,15 +26,15 @@ if (isset($_POST['email']) && isset($_POST['senha'])) {
         $_SESSION['email'] = $resultado['email'];
 
         if($_SESSION['niveis_acesso_id'] == "1"){
-            header("Location: formulario.php");
+            header("Location: ../formulario.php");
         }elseif($_SESSION['niveis_acesso_id'] == "2"){
-            header("Location: doacao.php");
+            header("Location: ../index.php");
         }else{
             header("Location: sobre.php");
         }
 
     }else{
         $_SESSION['loginErro'] = "Usuario ou senha Invalida";
-        header("Location: login.php");
+        header("Location: ../login.php");
     }
 } 

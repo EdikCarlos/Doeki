@@ -1,7 +1,7 @@
 <?php
 
 session_start();
-include_once("./Database/conexao.php");
+include_once("conexao.php");
 
 
 if (!$conn) {
@@ -17,8 +17,8 @@ if ((isset($_POST['descricao']))) {
     $result = $conn->query($sql); 
     echo "
         <script>
-            alert('Voce é legal')
-            window.location.href ='depoimentos.php'
+            alert('Voce alterou seu comentario')
+            window.location.href ='../depoimentos.php'
         </script>
     ";
     

@@ -1,8 +1,8 @@
 
 body {
-    margin-right: 0px;
-    margin-left: 100px;
-    margin-top: 50px;
+    margin: 0;
+	padding: 0;
+	box-sizing: border-box;
     background: url(background-div.png);
 }
 
@@ -41,19 +41,7 @@ h3 {
 .testemunho p, h4{
     text-align: center;
 }
-/*Inicio Menu da tela Home*/
-.menu1 {
-    background-image: url(imagem2.png);
-    min-width: 200px;
-    height: 780px;
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
 
-
-.drop {
-    font-size: 30pt;
-}
 /*Fim Menu da tela Home*/
 
 /*Inicio Resumo Doeki*/
@@ -115,14 +103,14 @@ h3 {
 /*Fim O poder de mudar uma vida*/
 
 /*Inicio Footer Home */
-.fimPagina {
+/* .fimPagina {
     position: absolute;
     width: 1382px;
     height: 837.5px;
     top: 1830px;
     left: 0;
     text-align: center;
-}
+} */
 
 .txtDoeki {
     position: absolute;
@@ -697,6 +685,7 @@ h3 {
 
   }
  */
+
 
 
 
