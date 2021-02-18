@@ -21,6 +21,8 @@ if (!isset($_SESSION['id_usuario'])) {
 </head>
 
 <body>
+
+
         <nav class="navbar navbar-light bg-info">
             <div class="navIntro d-flex ">
                 <h5 class="bg-warning p-2 rounded">Bem-Vindo (a) <strong><?php echo $_SESSION['nome']?></strong></h5>   
@@ -32,6 +34,9 @@ if (!isset($_SESSION['id_usuario'])) {
     <?php
         require('./frontend/components/Header.php');
     ?>
+
+
+
 
 
     <div class="passos row container-fluid">
@@ -60,8 +65,13 @@ if (!isset($_SESSION['id_usuario'])) {
 
     <div class="formulario container">
 
-        <h2 class="txtFormulario">Escolha uma opção para que nós possamos te ajudar ! =)</h2>
 
+
+
+
+
+
+<h2 class="txtFormulario">Escolha uma opção para que nós possamos te ajudar ! =)</h2>
 
 <!-- formulario -->
     <div class="container">
@@ -155,11 +165,16 @@ if (!isset($_SESSION['id_usuario'])) {
         </form>
     </div>
 
-    <div class="container w-100">
-        <?php
-                    require('./frontend/components/Footer.php')
-        ?>
-    </div>
+
+
+
+        <div>
+            <?php
+                            require('./frontend/components/Footer.php')
+            ?>
+        </div>
+
+        
         
 
 

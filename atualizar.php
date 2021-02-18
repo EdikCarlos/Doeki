@@ -17,7 +17,7 @@ if ((isset($_POST['descricao']))) {
     $result = $conn->query($sql); 
     echo "
         <script>
-            alert('Voce é legal')
+            alert('Voce alterou seu comentario')
             window.location.href ='depoimentos.php'
         </script>
     ";

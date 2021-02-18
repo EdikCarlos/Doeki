@@ -95,6 +95,7 @@ if (!isset($_SESSION['id_usuario'])) {
         <div class="container">
 
         <?php
+
         foreach ($depos as $depo) {
             ?>
             <div class="container">
@@ -128,6 +129,8 @@ if (!isset($_SESSION['id_usuario'])) {
     </main>
     
     </div>
+     
+
      
     <?php
             require('./frontend/components/Footer.php')
