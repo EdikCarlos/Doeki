@@ -30,7 +30,7 @@ if (!isset($_SESSION['id_usuario'])) {
             </div>
             <div class="navIntro mb-5 ">
                     <strong>
-                        <a href="#" class="btn btn-white btn-animate btn-lg">DOAR</a>
+                        <a href="doacao.php" class="btn btn-white btn-animate btn-lg">DOAR</a>
                     </strong>
             </div>
             <div  class="navIntro d-flex">             
