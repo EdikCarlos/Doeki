@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once("./Database/conexao.php");
 
 if (!$conn) {
@@ -10,7 +11,7 @@ FROM usuarios AS u JOIN doacoes AS d WHERE d.id_usuario = u.id_usuario";
 $datos = $conn->query($doacoes);
 
 
-session_start();
+
 
 if (!isset($_SESSION['id_usuario'])) {
     header('location: login.php');

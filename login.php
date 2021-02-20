@@ -66,7 +66,9 @@
 
       <div class="container-fluid col-3" style="margin-left: 30px;">
          <div class="container text-center" style="margin:40px auto 100px 50px;">
-            <button class="btn btn-info btn-block" style="width:300px;height:60px;"> <a href="sobre.php" class="text-white" style="text-decoration: none;">Venha nos conhecer!</a></button>
+            <form method="POST" action="Database/loginBack.php">
+                  <button class="btn btn-info btn-block" style="width:300px;height:60px;" type="submit">Venha nos conhecer!</button>
+            </form>
          </div>
          <img class="imagemInicio  " src="./imagens/logoInicio.png" alt="Imagem bonecos" style="width: 400px ;">
       </div>
