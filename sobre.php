@@ -1,10 +1,14 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['id_usuario'])) {
-    header('location: login.php');
-    exit;
+$id = $_SESSION["id_usuario"];
+
+if($id == ""){
+    $nome= "convidado";
+}else{
+    $nome= $_SESSION['nome'];
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -22,13 +26,21 @@ if (!isset($_SESSION['id_usuario'])) {
 <body>
         <nav class="navbar navbar-light bg-info d-flex justify-content-between fixed-top">
             <div class="navIntro d-flex">
-                <h5 class="bg-warning p-2 rounded">Bem-Vindo (a) <strong><?php echo $_SESSION['nome']?></strong></h5>   
+                <h5 class="bg-warning p-2 rounded">Bem-Vindo (a) <strong><?php echo $nome ?></strong></h5>   
             </div>
             <div class="navIntro mb-5 ">
                     <strong>
                         <a href="doacao.php" class="btn btn-white btn-animate btn-lg">DOAR</a>
                     </strong>
             </div>
+            <?php
+                if($id == ""){ ?>
+                    <div  class="navIntro d-flex">             
+                        <a class="text-dark" href="login.php"><h6 class="bg-warning ml-5 p-2 rounded"><strong>Login</strong></h6></a>
+                    </div> 
+            <?php
+                }
+            ?>
             <div  class="navIntro d-flex">             
                 <a class="text-dark" href="Database/sair.php"><h6 class="bg-warning ml-5 p-2 rounded"><strong>Sair</strong></h6></a>
             </div>

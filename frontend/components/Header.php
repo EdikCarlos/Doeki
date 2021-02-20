@@ -20,12 +20,6 @@
                         </li>
                         <li class="nav-item">
                             <h4>
-                                <a class="text-dark nav-link" href="doacao.php"><strong class="drop">D</strong>oação</a>
-                            </h4>
-                            
-                        </li>
-                        <li class="nav-item">
-                            <h4>
                                 <a class="text-dark nav-link" href="parceiros.php"><strong class="drop">P</strong>arceiros</a>
                             </h4>
                             

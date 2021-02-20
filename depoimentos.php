@@ -1,16 +1,17 @@
 <?php
 session_start();
 include_once("./Database/conexao.php");
-if(!isset($_SESSION['id_usuario'])){
-    header('Location: index.php');
-}else{
-    $depos = $conn->query("SELECT * FROM comentarios JOIN usuarios WHERE fk_usuario = id_usuario ORDER BY id_comentario DESC");
-} 
 
-if (!isset($_SESSION['id_usuario'])) {
-    header('location: login.php');
-    exit;
+$id = $_SESSION["id_usuario"];
+if($id == ""){
+    $nome= "convidado";
+}else{
+    $nome= $_SESSION['nome'];
 }
+
+
+$depos = $conn->query("SELECT * FROM comentarios JOIN usuarios WHERE fk_usuario = id_usuario ORDER BY id_comentario DESC");
+
 
 ?>
 
@@ -30,13 +31,21 @@ if (!isset($_SESSION['id_usuario'])) {
 
         <nav class="navbar navbar-light bg-info d-flex justify-content-between fixed-top">
             <div class="navIntro d-flex">
-                <h5 class="bg-warning p-2 rounded">Bem-Vindo (a) <strong><?php echo $_SESSION['nome']?></strong></h5>   
+                <h5 class="bg-warning p-2 rounded">Bem-Vindo (a) <strong><?php echo $nome?></strong></h5>   
             </div>
             <div class="navIntro mb-5 ">
                     <strong>
                         <a href="doacao.php" class="btn btn-white btn-animate btn-lg">DOAR</a>
                     </strong>
             </div>
+            <?php
+                if($id == ""){ ?>
+                    <div  class="navIntro d-flex">             
+                        <a class="text-dark" href="login.php"><h6 class="bg-warning ml-5 p-2 rounded"><strong>Login</strong></h6></a>
+                    </div> 
+            <?php
+                }
+            ?>
             <div  class="navIntro d-flex">             
                 <a class="text-dark" href="Database/sair.php"><h6 class="bg-warning ml-5 p-2 rounded"><strong>Sair</strong></h6></a>
             </div>
@@ -92,9 +101,17 @@ if (!isset($_SESSION['id_usuario'])) {
     <main class="container">
 
         <div class=container>
-            <form class="container text-primary row" action="comentarios.php" method="post">
-                    <input class="col-9 form-control pl-3" type="text" name="post" placeholder="No que você está pensando, <?php echo $_SESSION['nome'] ?>?">
-                    <button class="col-2 btn p-2 btn-success ml-2" type="submit">Publicar</button>
+            <form class="container text-primary row" action="Database/comentarios.php" method="post">
+                    <input class="col-9 form-control pl-3" type="text" name="post" placeholder="No que você está pensando, <?php echo $nome ?>?">
+                    <?php
+                        if($id != ""){ ?>
+                            <button class="col-2 btn p-2 btn-success ml-2" type="submit">Publicar</button>
+                        <?php } else { ?>
+                            <button class="col-2 btn p-2 btn-warning ml-2">
+                            <a class="" href="cadastro.php">Faça seu cadastro</a>
+                            </button>
+                        <?php } ?>
+
                 </form>
         </div>
 
@@ -119,14 +136,26 @@ if (!isset($_SESSION['id_usuario'])) {
                     <p><?php echo $depo["descricao"]; ?></p>
                 </div>
 
+                <!-- Botoes de Alteracao e Delete comentarios -->
 
-                <div class="row">
-                    <form action="Database/atualizar.php" method="post">
-                        <input class="col-xm-5" type="text" name="descricao"> <button class=" col-xm-5 btn btn-warning" type="submit">Alterar Comentário</button>
-                    </form>
-                    
-                    <button class="btn btn-danger col-xm-2 ml-3" onclick="confirmar()">Deletar Comentario</button>
-                </div>
+                    <?php 
+                        if($id == ""){ ?>
+                            <h1>Voce precisa se logar</h1>
+                    <?php   
+                        }else{ ?>
+                        <div class="row">
+                            <form action="Database/atualizar.php" method="post">
+                                <input class="col-xm-5" type="text" name="descricao"> <button class=" col-xm-5 btn btn-warning" type="submit">Alterar Comentário</button>
+                            </form>
+                            
+                            <button class="btn btn-danger col-xm-2 ml-3" onclick="confirmar()">Deletar Comentario</button>
+                        </div>
+                    <?php
+                        }
+                    ?>
+                
+
+                <!-- Fin -->
 
             </div>
         <?php } ?>
@@ -157,7 +186,7 @@ if (!isset($_SESSION['id_usuario'])) {
                 location.href = "Database/removeComentario.php?id_usuario=" + <?php echo $_SESSION["id_usuario"] ?>
             }
         }
-    </script
+    </script>
 </body>
 
 

@@ -2,9 +2,11 @@
 
 session_start();
 
-if (!isset($_SESSION['id_usuario'])) {
-    header('location: login.php');
-    exit;
+$id = $_SESSION["id_usuario"];
+if($id == ""){
+    $nome= "convidado";
+}else{
+    $nome= $_SESSION['nome'];
 }
 
 ?>
@@ -26,13 +28,21 @@ if (!isset($_SESSION['id_usuario'])) {
 
         <nav class="navbar navbar-light bg-info d-flex justify-content-between fixed-top">
             <div class="navIntro d-flex">
-                <h5 class="bg-warning p-2 rounded">Bem-Vindo (a) <strong><?php echo $_SESSION['nome']?></strong></h5>   
+                <h5 class="bg-warning p-2 rounded">Bem-Vindo (a) <strong><?php echo $nome?></strong></h5>   
             </div>
             <div class="navIntro mb-5 ">
                     <strong>
                         <a href="doacao.php" class="btn btn-white btn-animate btn-lg">DOAR</a>
                     </strong>
             </div>
+            <?php
+                if($id == ""){ ?>
+                    <div  class="navIntro d-flex">             
+                        <a class="text-dark" href="login.php"><h6 class="bg-warning ml-5 p-2 rounded"><strong>Login</strong></h6></a>
+                    </div> 
+            <?php
+                }
+            ?>
             <div  class="navIntro d-flex">             
                 <a class="text-dark" href="Database/sair.php"><h6 class="bg-warning ml-5 p-2 rounded"><strong>Sair</strong></h6></a>
             </div>
@@ -74,14 +84,12 @@ if (!isset($_SESSION['id_usuario'])) {
     <div class="formulario container">
 
 
+<?php
+    if($id != ""){ ?>
 
+    <h2 class="txtFormulario">Escolha uma opção para que nós possamos te ajudar !</h2>
 
-
-
-
-<h2 class="txtFormulario">Escolha uma opção para que nós possamos te ajudar ! =)</h2>
-
-<!-- formulario -->
+    <!-- formulario -->
     <div class="container">
     <form method="POST" action="Database/admDoador.php">
         <div class="row mb-3">
@@ -116,7 +124,7 @@ if (!isset($_SESSION['id_usuario'])) {
             <h5>Qual é o item que você quer doar ou receber? <br> (Se for um Parceiro não marque nada na caixa).</h5>
             <div class="row my-4">
                 <div class=" col-sm-3 form-check">
-                    <input class="form-check-input" type="checkbox" value="CadeiradeBanho"  id="gridRadios1" value="option1">
+                    <input class="form-check-input" type="checkbox" name="item" value="CadeiradeBanho"  id="gridRadios1" value="option2">
                     <label class="form-check-label" for="gridRadios1">
                         Cadeira de Banho
                     </label>
@@ -174,6 +182,11 @@ if (!isset($_SESSION['id_usuario'])) {
     </div>
 
 
+    <?php }else{ ?>
+        <h1>Faça seu cadastro para voce poder doar ou receber um item</h1>
+    <?php } ?>
+
+
 <hr>
 
         <div style="margin-left: -194px; margin-right: -194px">
@@ -183,9 +196,6 @@ if (!isset($_SESSION['id_usuario'])) {
         </div>
 
         
-        
-
-
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
