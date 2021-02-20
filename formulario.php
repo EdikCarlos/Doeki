@@ -5,6 +5,7 @@ include_once("./Database/conexao.php");
 if (!$conn) {
     echo "<p> voce ja pode mexer MySQL</p>";
 }
+
 $doacoes = "SELECT d.id_doacoe AS numero, u.nome AS nome, u.email AS email,  d.data_nasc AS data, d.tel AS tel, d.endereco AS endereco, d.item AS item, d.tipo AS tipo
 FROM usuarios AS u JOIN doacoes AS d WHERE d.id_usuario = u.id_usuario";
 

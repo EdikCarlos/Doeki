@@ -14,11 +14,16 @@ CREATE TABLE usuarios (
 
 
 INSERT INTO usuarios VALUES
-(1, 'admin', 'admin@admin.com', '202cb962ac59075b964b07152d234b70', 1, 1, '2016-02-14 00:00:01', '2016-02-20 21:58:01'),
+(1, 'Convidado', 'admin@admin.com', '202cb962ac59075b964b07152d234b70', 1, 1, '2016-02-14 00:00:01', '2016-02-20 21:58:01'),
 (2, 'Gi', 'gi@gmial.com', '202cb962ac59075b964b07152d234b70', 1, 2, '2016-02-14 00:00:04', '2016-02-20 21:58:12'),
 (3, 'Felipe', 'fe@gmail.com', '202cb962ac59075b964b07152d234b70', 1, 2, '2016-02-14 00:00:03', '2016-02-20 21:58:25')
 
-SELECT * FROM usuarios;
+
+SELECT COUNT(*) AS nro FROM usuarios
+
+SELECT COUNT(*) FROM usuarios AS u JOIN doacoes AS d WHERE u.id_usuario = d.id_usuario AND d.tipo = "beneficiario";
+
+
 
 CREATE TABLE niveis_acessos (
   id int(11) NOT NULL AUTO_INCREMENT,

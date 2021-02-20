@@ -3,7 +3,7 @@ session_start();
 
 $id = $_SESSION["id_usuario"];
 if($id == ""){
-    $nome= "convidado";
+    $nome= "Convidado";
 }else{
     $nome= $_SESSION['nome'];
 }
@@ -23,25 +23,23 @@ if($id == ""){
 </head>
 
 <body>
-        <nav class="navbar navbar-light bg-info d-flex justify-content-between fixed-top">
+<nav class="navbar navbar-light bg-info d-flex justify-content-between fixed-top">
             <div class="navIntro d-flex">
-                <h5 class="bg-warning p-2 rounded">Bem-Vindo (a) <strong><?php echo $nome?></strong></h5>   
+                <h5 class="bg-warning p-2 rounded">Bem-Vindo (a) <strong><?php echo $nome?></strong></h5>
             </div>
             <div class="navIntro mb-5 ">
                     <strong>
                         <a href="doacao.php" class="btn btn-white btn-animate btn-lg">DOAR</a>
                     </strong>
             </div>
+            <div  class="navIntro d-flex"> 
             <?php
                 if($id == ""){ ?>
-                    <div  class="navIntro d-flex">             
-                        <a class="text-dark" href="login.php"><h6 class="bg-warning ml-5 p-2 rounded"><strong>Login</strong></h6></a>
-                    </div> 
+                        <a class="text-dark" href="login.php"><h6 class="bg-warning mr-1 px-5 py-2 rounded"><strong>Login</strong></h6></a>
             <?php
                 }
             ?>
-            <div  class="navIntro d-flex">             
-                <a class="text-dark" href="Database/sair.php"><h6 class="bg-warning ml-5 p-2 rounded"><strong>Sair</strong></h6></a>
+                <a class="text-dark" href="Database/sair.php"><h6 class="bg-warning mr-1 px-5 py-2 rounded"><strong>Sair</strong></h6></a>
             </div>
         </nav>
 

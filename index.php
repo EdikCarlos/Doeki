@@ -1,12 +1,25 @@
 <?php
 session_start();
 
-$id = $_SESSION["id_usuario"];
+include_once("./Database/conexao.php");
+
+$id = $_SESSION['id_usuario'];
+
 if($id == ""){
-    $nome= "convidado";
+    $nome= "Convidado";
 }else{
     $nome= $_SESSION['nome'];
+
 }
+
+$nro_usuarios = "SELECT COUNT(*) AS nro FROM usuarios";
+$total_usuarios = $conn->query($nro_usuarios);
+
+$nro_doadores = "SELECT COUNT(*) AS nro FROM usuarios AS u JOIN doacoes AS d WHERE u.id_usuario = d.id_usuario AND d.tipo = 'doador'";
+$total_doadores = $conn->query($nro_doadores);
+
+$nro_beneficiaros = "SELECT COUNT(*) AS nro FROM usuarios AS u JOIN doacoes AS d WHERE u.id_usuario = d.id_usuario AND d.tipo = 'beneficiario'";
+$total_beneficiarios = $conn->query($nro_beneficiaros);
 
 ?>
 
@@ -26,33 +39,26 @@ if($id == ""){
     <div>
         <nav class="navbar navbar-light bg-info d-flex justify-content-between fixed-top">
             <div class="navIntro d-flex">
-                <h5 class="bg-warning p-2 rounded">Bem-Vindo (a) <strong><?php echo $nome?></strong></h5>   
+                <h5 class="bg-warning p-2 rounded">Bem-Vindo (a) <strong><?php echo $nome ?></strong></h5>
             </div>
-            
             <div class="navIntro mb-5 ">
                     <strong>
                         <a href="doacao.php" class="btn btn-white btn-animate btn-lg">DOAR</a>
                     </strong>
             </div>
-
+            <div  class="navIntro d-flex"> 
             <?php
                 if($id == ""){ ?>
-                    <div  class="navIntro d-flex">             
-                        <a class="text-dark" href="login.php"><h6 class="bg-warning ml-5 p-2 rounded"><strong>Login</strong></h6></a>
-                    </div> 
+                        <a class="text-dark" href="login.php"><h6 class="bg-warning mr-1 px-5 py-2 rounded"><strong>Login</strong></h6></a>
             <?php
                 }
             ?>
-
-            <div  class="navIntro d-flex">             
-                <a class="text-dark" href="Database/sair.php"><h6 class="bg-warning ml-5 p-2 rounded"><strong>Sair</strong></h6></a>
+                <a class="text-dark" href="Database/sair.php"><h6 class="bg-warning mr-1 px-5 py-2 rounded"><strong>Sair</strong></h6></a>
             </div>
         </nav>
-
         <?php
         require('./frontend/components/Header.php');
         ?>
-
         <div class="container">
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -68,9 +74,42 @@ if($id == ""){
             </div>
             </div>
         </div>
-        
 
-   
+        <div class="container p-4">
+            <h2>Dados da Doeki</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores accusamus veritatis dolorum similique nemo eaque, id tempore exercitationem voluptate aut obcaecati dignissimos tenetur sed aspernatur perferendis beatae voluptatum praesentium aliquam.</p>
+            <div class="d-flex justify-content-around">
+                <div class="p-5">
+                    <h3>Usuarios</h3>
+                    <?php
+                    foreach($total_usuarios as $total_usuario){
+                    ?>
+                        <h4 scope="row"><?php echo $total_usuario["nro"]; ?> pessoas</h4>
+                    <?php } ?>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus alias enim ratione! Nihil nulla magni eos eius impedit provident consequuntur.</p>
+                </div>
+                <div class="p-5">
+                    <h3>Doadores</h3>
+                    <?php
+                    foreach($total_doadores as $total_doador){
+                    ?>
+                        <h4 scope="row"><?php echo $total_doador["nro"]; ?> pessoas</h4>
+                    <?php } ?>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat id odit aliquam et animi pariatur, consectetur eaque porro quas aliquid?</p>
+                </div>
+                <div class="p-5">
+                    <h3>Beneficiarios</h3>
+                    <?php
+                    foreach($total_beneficiarios as $total_beneficiario){
+                    ?>
+                        <h4 scope="row"><?php echo $total_beneficiario["nro"]; ?> pessoas</h4>
+                    <?php } ?>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam in voluptatem modi dignissimos nobis corporis rerum hic.</p>
+                </div>
+            </div>
+        </div>
+        
+               
         <div class="sobe">
             <hr class="bg-warning">
             <div class="container row" style="margin-left: 30px;">
