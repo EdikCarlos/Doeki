@@ -59,6 +59,7 @@ $total_beneficiarios = $conn->query($nro_beneficiaros);
         <?php
         require('./frontend/components/Header.php');
         ?>
+        
         <div class="container">
             <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
@@ -74,6 +75,7 @@ $total_beneficiarios = $conn->query($nro_beneficiaros);
             </div>
             </div>
         </div>
+
         <hr class="bg-warning">
         <div class="container p-4">
             <h2>Dados da Doeki</h2>
