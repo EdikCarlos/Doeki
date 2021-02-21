@@ -79,7 +79,7 @@ $total_beneficiarios = $conn->query($nro_beneficiaros);
         <hr class="bg-warning">
         <div class="container p-4">
             <h2>Dados da Doeki</h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores accusamus veritatis dolorum similique nemo eaque, id tempore exercitationem voluptate aut obcaecati dignissimos tenetur sed aspernatur perferendis beatae voluptatum praesentium aliquam.</p>
+            <p>Abaixo a Doeki apresenta alguns dados de seu site, como a quantidade de visitantes, a quantidade de pessoas que fizeram uma doação e a quantidade de pessoas que foram ajudadas com essa iniciativa! </p>
             <div class="d-flex justify-content-around">
                 <div class="p-5">
                     <h3>Usuarios</h3>
@@ -88,7 +88,7 @@ $total_beneficiarios = $conn->query($nro_beneficiaros);
                     ?>
                         <h4 scope="row"><?php echo $total_usuario["nro"]; ?> pessoas</h4>
                     <?php } ?>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus alias enim ratione! Nihil nulla magni eos eius impedit provident consequuntur.</p>
+                    <p>A Doeki no ultimo mês teve <?php echo $total_usuario["nro"]; ?> visitante(s)! Voltem sempre e mudem mais vidas =D </p>
                 </div>
                 <div class="p-5">
                     <h3>Doadores</h3>
@@ -97,7 +97,7 @@ $total_beneficiarios = $conn->query($nro_beneficiaros);
                     ?>
                         <h4 scope="row"><?php echo $total_doador["nro"]; ?> pessoas</h4>
                     <?php } ?>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat id odit aliquam et animi pariatur, consectetur eaque porro quas aliquid?</p>
+                    <p>Não temos palavras para agradecer, graças a ajuda de todos a Doeki já teve <?php echo $total_doador["nro"]; ?> doações desde sua inauguração até hoje!!! Muito obrigado! </p>
                 </div>
                 <div class="p-5">
                     <h3>Beneficiarios</h3>
@@ -106,7 +106,7 @@ $total_beneficiarios = $conn->query($nro_beneficiaros);
                     ?>
                         <h4 scope="row"><?php echo $total_beneficiario["nro"]; ?> pessoas</h4>
                     <?php } ?>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam in voluptatem modi dignissimos nobis corporis rerum hic.</p>
+                    <p>Com a sua ajuda a Doeki mudou a vida de <?php echo $total_beneficiario["nro"]; ?> pessoas! Vamos aumentar ainda mais esse número =D</p>
                 </div>
             </div>
         </div>

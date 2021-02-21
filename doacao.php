@@ -116,25 +116,25 @@ if($id == ""){
             <h5>Qual é o item que você quer doar ou receber? <br> (Se for um Parceiro não marque nada na caixa).</h5>
             <div class="row my-4">
                 <div class=" col-sm-3 form-check">
-                    <input class="form-check-input" type="checkbox" name="item" value="CadeiradeBanho"  id="gridRadios1" value="option2">
+                    <input class="form-check-input" type="radio" name="item" value="CadeiradeBanho"  id="gridRadios1" value="option2" checked>
                     <label class="form-check-label" for="gridRadios1">
                         Cadeira de Banho
                     </label>
                 </div>
                 <div class=" col-sm-3 form-check">
-                    <input class="form-check-input" type="checkbox" name="item" value="CadeiradeRodas" id="gridRadios2" value="option2">
+                    <input class="form-check-input" type="radio" name="item" value="CadeiradeRodas" id="gridRadios2" value="option2">
                     <label class="form-check-label" for="gridRadios2">
                         Cadeira de Rodas
                     </label>
                 </div>
                 <div class=" col-sm-3 form-check">
-                    <input class="form-check-input" type="checkbox" name="item" value="Muleta" id="gridRadios2" value="option2">
+                    <input class="form-check-input" type="radio" name="item" value="Muleta" id="gridRadios2" value="option2">
                     <label class="form-check-label" for="gridRadios2">
                         Muleta
                     </label>
                 </div>
                 <div class=" col-sm-3 form-check">
-                    <input class="form-check-input" type="checkbox" name="item" value="Bengala" id="gridCheck1" value="option2">
+                    <input class="form-check-input" type="radio" name="item" value="Bengala" id="gridCheck1" value="option2">
                     <label class="form-check-label" for="gridRadios2">
                         Bengala
                     </label>
