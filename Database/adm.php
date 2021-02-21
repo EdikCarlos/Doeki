@@ -36,7 +36,7 @@ else if (strlen($nome) <= 3) {
 }
 else if (strlen($email) <= 3) {
     echo "<script>
-        alert('Digite um e-mail válido para realziar o cadastro!')
+        alert('Digite um e-mail válido para realizar o cadastro!')
         window.location.href = 'cadastro.php'
     </script>
     ";

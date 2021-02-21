@@ -74,7 +74,7 @@ $total_beneficiarios = $conn->query($nro_beneficiaros);
             </div>
             </div>
         </div>
-
+        <hr class="bg-warning">
         <div class="container p-4">
             <h2>Dados da Doeki</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores accusamus veritatis dolorum similique nemo eaque, id tempore exercitationem voluptate aut obcaecati dignissimos tenetur sed aspernatur perferendis beatae voluptatum praesentium aliquam.</p>
