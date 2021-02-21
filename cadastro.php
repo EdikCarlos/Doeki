@@ -14,19 +14,31 @@
 </head>
 
 <body>
+<<<<<<< Updated upstream
    <div class="container row">
       <div class="container col bg-info" style="height: 635px;">
          <form class="container border border-light rounded 
                shadow  bg-white rounded " method="POST" action="Database/adm.php" style="width: 380px; height:500px;margin-top: 100px;">
+=======
+
+
+   <div class="container row">
+      <div class="container col bg-info" style="height: 635px;">
+         <form class="container border border-light rounded 
+               shadow  bg-white rounded " method="POST" action="Database/adm.php" style="width: 380px; height:400px;margin-top: 100px;">
+>>>>>>> Stashed changes
             <h4 class="tituloForm text-center mt-4">
                Cadastre-se Aqui!
             </h4>
             <div class="form-group px-5">
+<<<<<<< Updated upstream
                <label for="email">Nome:</label>
                <input type="text" class="form-control" name="nome" id="email" aria-describedby="emailHelp" placeholder="Digite seu nome" required>
 
             </div>
             <div class="form-group px-5">
+=======
+>>>>>>> Stashed changes
                <label for="email">Endereço de email:</label>
                <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Digite seu email" required>
 
@@ -39,9 +51,12 @@
                <label for="conf_senha">Confirme sua senha:</label>
                <input type="password" class="form-control" name="conf_senha" id="conf_senha" placeholder=" Confirme sua senha" required>
             </div>
+<<<<<<< Updated upstream
             <div class="form-group px-5">
                   <a href="login.php">Fazer login</a>
             </div>
+=======
+>>>>>>> Stashed changes
             <div class="text-center">
                <button type="submit" class="btn btn-info">Enviar</button>
             </div>

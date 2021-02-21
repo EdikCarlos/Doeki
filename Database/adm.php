@@ -1,4 +1,9 @@
 <?php
+<<<<<<< Updated upstream
+=======
+ $link = mysqli_connect("localhost","root","","doeki");
+// $link = mysqli_connect("sql202.epizy.com", "epiz_27133760", "8XoIjZmXQh", "epiz_27133760_cadastro");
+>>>>>>> Stashed changes
 
 include_once("../Database/conexao.php");
 
@@ -14,6 +19,7 @@ if (strlen($nome) > 3 && strlen($email) > 3 && strlen($senha) > 3 && $senha == $
     $sql = "INSERT INTO usuarios (nome, email, senha) values ('$nome', '$email', '$senha_cripto')";
     $conn->query($sql);
 
+<<<<<<< Updated upstream
     echo "<script>
             alert('Cadastro efetuado!')
             window.location.href = '../login.php'
@@ -24,6 +30,16 @@ else if ($senha != $conf_senha) {
     echo "<script>
             alert('As senhas devem ser iguais, tente novamente!')
             window.location.href = 'cadastro.php'
+=======
+    $sql = "INSERT INTO usuarios(email,senha) VALUES('$email','$senha')";
+    
+    $result = $link->query($sql); 
+    
+    echo "
+        <script>
+            alert('Cadastro efetuado!!')
+            window.location.href = '../index.php'
+>>>>>>> Stashed changes
         </script>
         ";
 }

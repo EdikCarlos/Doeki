@@ -76,6 +76,7 @@ if($id == ""){
     <div class="formulario container">
 
 
+<<<<<<< Updated upstream
 <?php
     if($id != ""){ ?>
 
@@ -84,6 +85,19 @@ if($id == ""){
     <!-- formulario -->
     <div class="container">
     <form method="POST" action="Database/admDoador.php">
+=======
+
+
+
+
+
+
+
+
+
+<!-- formulario -->
+        <form method="POST" action="Database/admDoador.php">
+>>>>>>> Stashed changes
         <div class="row mb-3">
                 <label for="inputPassword3" class="col-sm-2 col-form-label">Nome:</label>
                 <div class="col-sm-10">
@@ -103,8 +117,12 @@ if($id == ""){
                 </div>
                 <label for="inputPassword3" class="col-sm-2 col-form-label">Telefone:</label>
                 <div class="col-sm-5">
+<<<<<<< Updated upstream
                     <input type="text" class="form-control" name="tel" placeholder="Ex.(00) 00000-0000"
                     onkeypress="$(this).mask('(00) 00000-0000')" id="inputPassword3" style="background-color: lightblue;">
+=======
+                    <input type="text" class="form-control" name="tel" placeholder="Ex.(11)95675-4312" id="inputPassword3" style="background-color: lightblue;">
+>>>>>>> Stashed changes
                 </div>
             </div>
             <div class="row mb-3">
@@ -116,7 +134,11 @@ if($id == ""){
             <h5>Qual é o item que você quer doar ou receber? <br> (Se for um Parceiro não marque nada na caixa).</h5>
             <div class="row my-4">
                 <div class=" col-sm-3 form-check">
+<<<<<<< Updated upstream
                     <input class="form-check-input" type="checkbox" name="item" value="CadeiradeBanho"  id="gridRadios1" value="option2">
+=======
+                    <input class="form-check-input" type="checkbox" value="CadeiradeBanho"  id="gridRadios1" value="option1">
+>>>>>>> Stashed changes
                     <label class="form-check-label" for="gridRadios1">
                         Cadeira de Banho
                     </label>
@@ -168,11 +190,31 @@ if($id == ""){
                 </div>
             </div>
             <div class="row">
+<<<<<<< Updated upstream
                 <input class="botaoEnviar btn btn-warning col-lg-12" name="submit" type="submit">
+=======
+                <input class="botaoEnviar btn btn-warning col-lg-12" name="submit" type="submit" href="/Doeki_backend/inicio.php">
+>>>>>>> Stashed changes
             </div>
         </form>
     </div>
 
+<<<<<<< Updated upstream
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- <form method="POST" action="Database/admDoador.php">
+>>>>>>> Stashed changes
 
     <?php }else{ ?>
         <button class="btn btn-danger rounded"><a href="login.php" class="text-white text-decoration-none"><h1>Faça seu cadastro para você poder doar ou receber um item</h1></a></button>
