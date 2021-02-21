@@ -11,7 +11,7 @@ $endereco = $_POST['endereco'];
 $item = $_POST['item'];
 $tipo = $_POST['tipo'];
 
-if(strlen($tel) > 5 && strlen($endereco) > 3 && isset($_POST['item']) && isset($_POST['tipo']) ){
+if(strlen($tel) > 3 && strlen($endereco) > 3 && isset($_POST['item']) && isset($_POST['tipo']) ){
 
     $sql = "INSERT INTO doacoes (id_usuario, data_nasc, tel, endereco, item, tipo)
             VALUES ('$id_usuario','$data_nasc', '$tel', '$endereco', '$item', '$tipo')";
@@ -27,21 +27,21 @@ if(strlen($tel) > 5 && strlen($endereco) > 3 && isset($_POST['item']) && isset($
     echo "
         <script>
             alert ('Digite uma data de nascimento válida! ... tente de novo!')
-            window.location.href = '/doacao.php'
+            window.location.href = '../doacao.php'
         </script>
     ";
 }else if (strlen($tel <= 3)){
     echo "
         <script>
-            alert ('Digite um telefone válido realizar o cadastro! ... tente de novo!')
-            window.location.href = '/doacao.php'
+            alert ('Digite um telefone válido para realizar o cadastro! ... tente de novo!')
+            window.location.href = '../doacao.php'
         </script>
     ";
-}else if (strlen($endereco = 3)){
+}else if (strlen($endereco <= 3)){
     echo "
         <script>
             alert ('Digite um endereço válido ... tente de novo!')
-            window.location.href = '/doacao.php'
+            window.location.href = '../doacao.php'
         </script>
     ";
 }

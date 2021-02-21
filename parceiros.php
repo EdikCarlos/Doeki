@@ -3,7 +3,7 @@ session_start();
 
 $id = $_SESSION["id_usuario"];
 if($id == ""){
-    $nome= "convidado";
+    $nome= "Convidado";
 }else{
     $nome= $_SESSION['nome'];
 }
@@ -23,48 +23,45 @@ if($id == ""){
 </head>
 
 <body>
-        <nav class="navbar navbar-light bg-info d-flex justify-content-between fixed-top">
+<nav class="navbar navbar-light bg-info d-flex justify-content-between fixed-top">
             <div class="navIntro d-flex">
-                <h5 class="bg-warning p-2 rounded">Bem-Vindo (a) <strong><?php echo $nome?></strong></h5>   
+                <h5 class="bg-warning p-2 rounded">Bem-Vindo (a) <strong><?php echo $nome?></strong></h5>
             </div>
             <div class="navIntro mb-5 ">
                     <strong>
                         <a href="doacao.php" class="btn btn-white btn-animate btn-lg">DOAR</a>
                     </strong>
             </div>
+            <div  class="navIntro d-flex"> 
             <?php
                 if($id == ""){ ?>
-                    <div  class="navIntro d-flex">             
-                        <a class="text-dark" href="login.php"><h6 class="bg-warning ml-5 p-2 rounded"><strong>Login</strong></h6></a>
-                    </div> 
+                        <a class="text-dark" href="login.php"><h6 class="bg-warning mr-1 px-5 py-2 rounded"><strong>Login</strong></h6></a>
             <?php
                 }
             ?>
-            <div  class="navIntro d-flex">             
-                <a class="text-dark" href="Database/sair.php"><h6 class="bg-warning ml-5 p-2 rounded"><strong>Sair</strong></h6></a>
+                <a class="text-dark" href="Database/sair.php"><h6 class="bg-warning mr-1 px-5 py-2 rounded"><strong>Sair</strong></h6></a>
             </div>
         </nav>
 
     <?php
       require('./frontend/components/Header.php');
     ?>
-    
     <div class="titParc container-fluid">
         <h1>Parceiros</h1>
     </div>
     <div class="container">
         <div class="blocoPc1">
-            <div class="recode text-center container mr-1 col"><img class="imgP" src="imagens/fbr.jpg" alt="FBR">
+            <div class="recode text-center container mr-1 col"><a href="https://fbrortopedia.com.br/loja/" target="_blank"><img class="imgP" src="imagens/fbr.jpg" alt="FBR"></a>
                 <p>Criada em 5 de Maio de 2017, por Fabio Batista Rodrigues, especialista no seguimento ortopédico com uma sólida experiência de mais de 10 anos.
                     O histórico de seu fundador é marcado pelas inúmeras aulas, exposições e palestras ministradas nacionalmente e internacionalmente.
                     A filosofia está associada a maneira humanizada de nosso atendimento, por meio de uma assistência cuidadosa e focada no bem-estar do indivíduo. Reconhecendo assim, a importância e valorizando a vida.
                     Nós da FBR Ortopedia, somos reconhecidos pela preocupação com nossos clientes, e o oferecimento de tais soluções que minimizam as dificuldades por seu público-alvo. Procurando entender para atender, e com maestria.
                     Sendo assim, surge a FBR Ortopedia online, uma ferramenta com um extenso catálogo dos melhores produtos certificados em sua categoria. No portal online é possível fazer seus pedidos, e acompanhar nossa agenda de eventos, sem deixar de lado todo, nossa prestimosa assistência.</p>
+                    <p style="color: red;">*** Caso você durante uma compra tanto na loja fisica como na online, citar o nome da Doeki, irá ganhar automaticamente 20% de desconto!!! ***</p>
             </div>
 
         </div>
     </div>
-     
     <?php
             require('./frontend/components/Footer.php')
     ?>

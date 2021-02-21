@@ -3,8 +3,9 @@
 session_start();
 
 $id = $_SESSION["id_usuario"];
+
 if($id == ""){
-    $nome= "convidado";
+    $nome= "Convidado";
 }else{
     $nome= $_SESSION['nome'];
 }
@@ -24,38 +25,29 @@ if($id == ""){
 </head>
 
 <body>
-
-
         <nav class="navbar navbar-light bg-info d-flex justify-content-between fixed-top">
             <div class="navIntro d-flex">
-                <h5 class="bg-warning p-2 rounded">Bem-Vindo (a) <strong><?php echo $nome?></strong></h5>   
+                <h5 class="bg-warning p-2 rounded">Bem-Vindo (a) <strong><?php echo $nome?></strong></h5>
             </div>
             <div class="navIntro mb-5 ">
                     <strong>
                         <a href="doacao.php" class="btn btn-white btn-animate btn-lg">DOAR</a>
                     </strong>
             </div>
+            <div  class="navIntro d-flex"> 
             <?php
                 if($id == ""){ ?>
-                    <div  class="navIntro d-flex">             
-                        <a class="text-dark" href="login.php"><h6 class="bg-warning ml-5 p-2 rounded"><strong>Login</strong></h6></a>
-                    </div> 
+                        <a class="text-dark" href="login.php"><h6 class="bg-warning mr-1 px-5 py-2 rounded"><strong>Login</strong></h6></a>
             <?php
                 }
             ?>
-            <div  class="navIntro d-flex">             
-                <a class="text-dark" href="Database/sair.php"><h6 class="bg-warning ml-5 p-2 rounded"><strong>Sair</strong></h6></a>
+                <a class="text-dark" href="Database/sair.php"><h6 class="bg-warning mr-1 px-5 py-2 rounded"><strong>Sair</strong></h6></a>
             </div>
         </nav>
-
         
     <?php
         require('./frontend/components/Header.php');
     ?>
-
-
-
-
 
     <div class="passos row container-fluid">
         <div class="imgApertar container col text-center">
@@ -176,14 +168,14 @@ if($id == ""){
                 </div>
             </div>
             <div class="row">
-                <input class="botaoEnviar btn btn-warning col-lg-12" name="submit" type="submit" href="/Doeki_backend/inicio.php">
+                <input class="botaoEnviar btn btn-warning col-lg-12" name="submit" type="submit">
             </div>
         </form>
     </div>
 
 
     <?php }else{ ?>
-        <h1>Faça seu cadastro para voce poder doar ou receber um item</h1>
+        <button class="btn btn-danger rounded"><a href="login.php" class="text-white text-decoration-none"><h1>Faça seu cadastro para você poder doar ou receber um item</h1></a></button>
     <?php } ?>
 
 

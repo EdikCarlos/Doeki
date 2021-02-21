@@ -18,7 +18,7 @@ if (strlen($comentario) > 0) {
     if($result == true){
         echo "
             <script>
-                alert('Voce é legal mesmo')
+                alert('Agradecemos muito por seu depoimento =D')
                 location.href = '../depoimentos.php'
             </script>
         ";

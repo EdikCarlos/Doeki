@@ -66,7 +66,7 @@
 
       <div class="container-fluid col-3" style="margin-left: 30px;">
          <div class="container text-center" style="margin:40px auto 100px 50px;">
-            <form method="POST" action="Database/loginBack.php">
+            <form method="POST" action="index.php">
                   <button class="btn btn-info btn-block" style="width:300px;height:60px;" type="submit">Venha nos conhecer!</button>
             </form>
          </div>

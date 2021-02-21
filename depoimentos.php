@@ -4,7 +4,7 @@ include_once("./Database/conexao.php");
 
 $id = $_SESSION["id_usuario"];
 if($id == ""){
-    $nome= "convidado";
+    $nome= "Convidado";
 }else{
     $nome= $_SESSION['nome'];
 }
@@ -31,23 +31,21 @@ $depos = $conn->query("SELECT * FROM comentarios JOIN usuarios WHERE fk_usuario 
 
         <nav class="navbar navbar-light bg-info d-flex justify-content-between fixed-top">
             <div class="navIntro d-flex">
-                <h5 class="bg-warning p-2 rounded">Bem-Vindo (a) <strong><?php echo $nome?></strong></h5>   
+                <h5 class="bg-warning p-2 rounded">Bem-Vindo (a) <strong><?php echo $nome?></strong></h5>
             </div>
             <div class="navIntro mb-5 ">
                     <strong>
                         <a href="doacao.php" class="btn btn-white btn-animate btn-lg">DOAR</a>
                     </strong>
             </div>
+            <div  class="navIntro d-flex"> 
             <?php
                 if($id == ""){ ?>
-                    <div  class="navIntro d-flex">             
-                        <a class="text-dark" href="login.php"><h6 class="bg-warning ml-5 p-2 rounded"><strong>Login</strong></h6></a>
-                    </div> 
+                        <a class="text-dark" href="login.php"><h6 class="bg-warning mr-1 px-5 py-2 rounded"><strong>Login</strong></h6></a>
             <?php
                 }
             ?>
-            <div  class="navIntro d-flex">             
-                <a class="text-dark" href="Database/sair.php"><h6 class="bg-warning ml-5 p-2 rounded"><strong>Sair</strong></h6></a>
+                <a class="text-dark" href="Database/sair.php"><h6 class="bg-warning mr-1 px-5 py-2 rounded"><strong>Sair</strong></h6></a>
             </div>
         </nav>
 
@@ -59,35 +57,35 @@ $depos = $conn->query("SELECT * FROM comentarios JOIN usuarios WHERE fk_usuario 
         <div class="row">
             <div class="testemunho container col">
                 <img src="./imagens/AmigoCadeira.png" alt="">
-                <h4>Depoimento: Juan Garcia</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, deleniti facere amet ut sunt corporis beatae similique explicabo, odit hic, et magni rem. Necessitatibus deleniti explicabo fuga, voluptates neque odit?</p>
+                <h4> Juan Garcia</h4>
+                <p>Um serviço de primeira! O sistema é simplesmente maravilhoso: intuitivo, bonito e moderno. Superou todas as minhas expectativas.</p>
             </div>
             <div class="testemunho container col">
                 <img src="./imagens/amigo1.png" alt="">
-                <h4>Depoimento: Pedro José</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, deleniti facere amet ut sunt corporis beatae similique explicabo, odit hic, et magni rem. Necessitatibus deleniti explicabo fuga, voluptates neque odit?</p>
+                <h4>Pedro José</h4>
+                <p>A Doeki tem respondido a todas as minhas solicitações e questões com profissionalismo e eficácia notável. Sente-se que para além da tecnologia há um relacionamento humano fundamental na partilha de conhecimentos e na vida.</p>
             </div>
             <div class="testemunho container col">
                 <img src="./imagens/amiga2.png" alt="">
-                <h4>Depoimento: Mariana Pereira</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, deleniti facere amet ut sunt corporis beatae similique explicabo, odit hic, et magni rem. Necessitatibus deleniti explicabo fuga, voluptates neque odit?</p>
+                <h4> Mariana Pereira</h4>
+                <p>Estou muito satisfeita com a aquisição desse grande benefício pra minha filha.Quando conheci esse site pensei logo... Vou fazer meu cadastro para minha filha ter mais acessibilidade.</p>
             </div>
         </div>
         <div class="row">
             <div class="testemunho container col">
                 <img src="./imagens/amigo3.png" alt="">
-                <h4>Depoimento: Márcio Silva</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, deleniti facere amet ut sunt corporis beatae similique explicabo, odit hic, et magni rem. Necessitatibus deleniti explicabo fuga, voluptates neque odit?</p>
+                <h4> Márcio Silva</h4>
+                <p>O sistema é extremamente fácil, além do resultado final do site ter sido ótimo, a Doeki nos trouxe uma solução de baixo custo, outro ponto positivo é o suporte que sempre atende muitíssimo bem.</p>
             </div>
             <div class="testemunho container col">
                 <img src="./imagens/amiga4.png" alt="">
-                <h4>Depoimento: Maria José</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, deleniti facere amet ut sunt corporis beatae similique explicabo, odit hic, et magni rem. Necessitatibus deleniti explicabo fuga, voluptates neque odit?</p>
+                <h4> Maria José</h4>
+                <p>Plataforma flexível que atende as necessidades do cliente. Todas as demandas solicitadas foram atendidas em tempo. Suporte técnico excelente, sempre pronto a atender. Parabéns pela serviço oferecido e vida longa e próspera para a família Doeki</p>
             </div>
             <div class="testemunho container col">
                 <img src="./imagens/amigo5.png" alt="">
-                <h4>Depoimento: Sebastião Ferreira</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, deleniti facere amet ut sunt corporis beatae similique explicabo, odit hic, et magni rem. Necessitatibus deleniti explicabo fuga, voluptates neque odit?</p>
+                <h4> Sebastião Ferreira</h4>
+                <p>Agradeço pela oportunidade e as portas de minha casa estarão sempre abertas para o que for necessário para o projeto da Doeki</p>
             </div>
         </div>
 
@@ -108,7 +106,7 @@ $depos = $conn->query("SELECT * FROM comentarios JOIN usuarios WHERE fk_usuario 
                             <button class="col-2 btn p-2 btn-success ml-2" type="submit">Publicar</button>
                         <?php } else { ?>
                             <button class="col-2 btn p-2 btn-warning ml-2">
-                            <a class="" href="cadastro.php">Faça seu cadastro</a>
+                            <a class="text-decoration-none text-dark" href="cadastro.php"><strong>Faça seu cadastro</strong></a>
                             </button>
                         <?php } ?>
 
@@ -139,20 +137,15 @@ $depos = $conn->query("SELECT * FROM comentarios JOIN usuarios WHERE fk_usuario 
                 <!-- Botoes de Alteracao e Delete comentarios -->
 
                     <?php 
-                        if($id == ""){ ?>
-                            <h1>Voce precisa se logar</h1>
-                    <?php   
-                        }else{ ?>
-                        <div class="row">
+                        if($id != ""){ ?>
+                            <div class="row">
                             <form action="Database/atualizar.php" method="post">
                                 <input class="col-xm-5" type="text" name="descricao"> <button class=" col-xm-5 btn btn-warning" type="submit">Alterar Comentário</button>
                             </form>
                             
                             <button class="btn btn-danger col-xm-2 ml-3" onclick="confirmar()">Deletar Comentario</button>
                         </div>
-                    <?php
-                        }
-                    ?>
+                    <?php }?>
                 
 
                 <!-- Fin -->
