@@ -2,6 +2,7 @@
 session_start();
 include_once("./Database/conexao.php");
 
+<<<<<<< Updated upstream
 if (!$conn) {
     echo "<p> voce ja pode mexer MySQL</p>";
 }
@@ -20,6 +21,16 @@ if (!isset($_SESSION['id_usuario'])) {
 }
 
 
+=======
+ $link = mysqli_connect("localhost", "root", "", "doeki");
+
+if (!$link) {
+    echo "<p> voce ja pode mexer MySQL</p>";
+}
+$doacoes = "SELECT d.id_doacoe AS numero, u.nome AS nome, u.email AS email,  d.data_nasc AS data, d.tel AS tel, d.endereco AS endereco, d.item AS item, d.tipo AS tipo
+FROM usuarios AS u INNER JOIN doacoes AS d";
+$datos = $link->query($doacoes);
+>>>>>>> Stashed changes
 ?>
 
 <!DOCTYPE html>
@@ -75,6 +86,7 @@ if (!isset($_SESSION['id_usuario'])) {
                 foreach ($datos as $dato) {
                 ?>
                     <tr>
+<<<<<<< Updated upstream
                         <th scope="row"><?php echo $dato["numero"]; ?></th>
                         <td><?php echo $dato["nome"]; ?></td>
                         <td><?php echo $dato["email"]; ?></td>
@@ -83,6 +95,16 @@ if (!isset($_SESSION['id_usuario'])) {
                         <td><?php echo $dato["endereco"]; ?></td>
                         <td><?php echo $dato["item"]; ?></td>
                         <td><?php echo $dato["tipo"]; ?></td>
+=======
+                        <th scope="row"><?php echo $fila["numero"]; ?></th>
+                        <td><?php echo $fila["nome"]; ?></td>
+                        <td><?php echo $fila["email"]; ?></td>
+                        <td><?php echo $fila["data"]; ?></td>
+                        <td><?php echo $fila["tel"]; ?></td>
+                        <td><?php echo $fila["endereco"]; ?></td>
+                        <td><?php echo $fila["item"]; ?></td>
+                        <td><?php echo $fila["tipo"]; ?></td>
+>>>>>>> Stashed changes
                     </tr>
                 <?php } ?>
 
