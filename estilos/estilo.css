@@ -728,11 +728,58 @@ h3 {
     .ods3 {
         max-width: 200px;
     }
+
+    .ajuste{
+        margin-top: 130px;
+    }
+
+    .ajuste2 {
+        width: 530px;
+        padding-left: 160px;
+    }
   }
 
   @media only screen and (max-width : 800px) {
     .planEstrat {
         max-width: 900px;
+    }
+
+    .ajuste{
+        margin-top: 130px;
+    }
+    .ajuste2 {
+        width: 530px;
+        padding-left: 160px;
+    }
+    
+  }
+
+  @media only screen and (max-width : 700px) {
+    .planEstrat {
+        max-width: 900px;
+    }
+
+    .ajuste{
+        margin-top: 130px;
+    }
+    .ajuste2 {
+        width: 530px;
+        padding-left: 160px;
+    }
+    
+  }
+
+  @media only screen and (max-width : 400px) {
+    .planEstrat {
+        max-width: 900px;
+    }
+
+    .ajuste{
+        margin-top: 130px;
+    }
+    .ajuste2 {
+        width: 530px;
+        padding-left: 160px;
     }
     
   }

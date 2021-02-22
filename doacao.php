@@ -25,11 +25,11 @@ if($id == ""){
 </head>
 
 <body>
-        <nav class="navbar navbar-light bg-info d-flex justify-content-between fixed-top">
+<nav class="navbar navbar-light bg-info d-flex justify-content-between fixed-top">
             <div class="navIntro d-flex">
-                <h5 class="bg-warning p-2 rounded">Bem-Vindo (a) <strong><?php echo $nome?></strong></h5>
+                <h5 class="bg-warning p-2 rounded">Bem-Vindo (a) <strong><?php echo $nome ?></strong></h5>
             </div>
-            <div class="navIntro mb-5 ">
+            <div class="navIntro mb-5">
                     <strong>
                         <a href="doacao.php" class="btn btn-white btn-animate btn-lg">DOAR</a>
                     </strong>
@@ -45,9 +45,11 @@ if($id == ""){
             </div>
         </nav>
         
-    <?php
+        <div class="ajuste">
+        <?php
         require('./frontend/components/Header.php');
-    ?>
+        ?>
+        </div>
 
     <div class="passos row container-fluid">
         <div class="imgApertar container col text-center">
@@ -181,7 +183,7 @@ if($id == ""){
 
 <hr>
 
-        <div style="margin-left: -194px; margin-right: -194px">
+        <div class="ajuste2" style="margin-left: -194px; margin-right: -194px">
             <?php
                 require('./frontend/components/Footer.php')
             ?>

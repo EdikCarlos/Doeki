@@ -28,31 +28,36 @@ $depos = $conn->query("SELECT * FROM comentarios JOIN usuarios WHERE fk_usuario 
 </head>
 
 <body>
-
+<div class="row container">
         <nav class="navbar navbar-light bg-info d-flex justify-content-between fixed-top">
-            <div class="navIntro d-flex">
-                <h5 class="bg-warning p-2 rounded">Bem-Vindo (a) <strong><?php echo $nome?></strong></h5>
+            <div class="navIntro d-flex ">
+                <h5 class="bg-warning p-2 rounded">Bem-Vindo (a) <strong><?php echo $nome ?></strong></h5>
             </div>
             <div class="navIntro mb-5 ">
-                    <strong>
-                        <a href="doacao.php" class="btn btn-white btn-animate btn-lg">DOAR</a>
-                    </strong>
+                <strong>
+                    <a href="doacao.php" class="btn btn-white btn-animate btn-lg">DOAR</a>
+                </strong>
             </div>
-            <div  class="navIntro d-flex"> 
-            <?php
-                if($id == ""){ ?>
-                        <a class="text-dark" href="login.php"><h6 class="bg-warning mr-1 px-5 py-2 rounded"><strong>Login</strong></h6></a>
-            <?php
+            <div class="navIntro d-flex ">
+                <?php
+                if ($id == "") { ?>
+                    <a class="text-dark" href="login.php">
+                        <h6 class="bg-warning mr-1 px-5 py-2 rounded"><strong>Login</strong></h6>
+                    </a>
+                <?php
                 }
-            ?>
-                <a class="text-dark" href="Database/sair.php"><h6 class="bg-warning mr-1 px-5 py-2 rounded"><strong>Sair</strong></h6></a>
+                ?>
+                <a class="text-dark" href="Database/sair.php">
+                    <h6 class="bg-warning mr-1 px-5 py-2 rounded"><strong>Sair</strong></h6>
+                </a>
             </div>
         </nav>
+    </div>
 
-    
-    <?php
+        <div class="ajuste">
+        <?php
         require('./frontend/components/Header.php');
-    ?>
+        ?>
     <div class="container">
         <div class="row">
             <div class="testemunho container col">
@@ -105,9 +110,9 @@ $depos = $conn->query("SELECT * FROM comentarios JOIN usuarios WHERE fk_usuario 
                         if($id != ""){ ?>
                             <button class="col-2 btn p-2 btn-success ml-2" type="submit">Publicar</button>
                         <?php } else { ?>
-                            <button class="col-2 btn p-2 btn-warning ml-2">
+                            <div class="col-2 btn p-2 btn-warning ml-2">
                             <a class="text-decoration-none text-dark" href="cadastro.php"><strong>Faça seu cadastro</strong></a>
-                            </button>
+                            </div>
                         <?php } ?>
 
                 </form>

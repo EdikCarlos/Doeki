@@ -25,15 +25,15 @@ if($id == ""){
 
 <body>
 <nav class="navbar navbar-light bg-info d-flex justify-content-between fixed-top">
-            <div class="navIntro d-flex">
-                <h5 class="bg-warning p-2 rounded">Bem-Vindo (a) <strong><?php echo $nome?></strong></h5>
+            <div class="navIntro d-flex ">
+                <h5 class="bg-warning p-2 rounded">Bem-Vindo (a) <strong><?php echo $nome ?></strong></h5>
             </div>
             <div class="navIntro mb-5 ">
                     <strong>
                         <a href="doacao.php" class="btn btn-white btn-animate btn-lg">DOAR</a>
                     </strong>
             </div>
-            <div  class="navIntro d-flex"> 
+            <div  class="navIntro d-flex "> 
             <?php
                 if($id == ""){ ?>
                         <a class="text-dark" href="login.php"><h6 class="bg-warning mr-1 px-5 py-2 rounded"><strong>Login</strong></h6></a>
@@ -43,9 +43,12 @@ if($id == ""){
                 <a class="text-dark" href="Database/sair.php"><h6 class="bg-warning mr-1 px-5 py-2 rounded"><strong>Sair</strong></h6></a>
             </div>
         </nav>
-    <?php
-      require('./frontend/components/Header.php')
-    ?>
+        
+        <div class="ajuste">
+        <?php
+        require('./frontend/components/Header.php');
+        ?>
+        </div>
 
     <section class="quemSomos container" style="min-width: 200px;">
         <h2> Quem Somos</h2>
