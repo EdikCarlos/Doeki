@@ -52,11 +52,12 @@ $total_beneficiarios = $conn->query($nro_beneficiaros);
                         <h6 class="bg-warning mr-1 px-5 py-2 rounded"><strong>Login</strong></h6>
                     </a>
                 <?php
-                }
+                }else{
                 ?>
                 <a class="text-dark" href="Database/sair.php">
                     <h6 class="bg-warning mr-1 px-5 py-2 rounded"><strong>Sair</strong></h6>
                 </a>
+                <?php }?>
             </div>
         </nav>
         </div>
