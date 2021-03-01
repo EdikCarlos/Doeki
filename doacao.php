@@ -39,10 +39,12 @@ if($id == ""){
                 if($id == ""){ ?>
                         <a class="text-dark" href="login.php"><h6 class="bg-warning mr-1 px-5 py-2 rounded"><strong>Login</strong></h6></a>
             <?php
-                }
-            ?>
-                <a class="text-dark" href="Database/sair.php"><h6 class="bg-warning mr-1 px-5 py-2 rounded"><strong>Sair</strong></h6></a>
-            </div>
+                }else{
+                ?>
+                <a class="text-dark" href="Database/sair.php">
+                    <h6 class="bg-warning mr-1 px-5 py-2 rounded"><strong>Sair</strong></h6>
+                </a>
+            <?php }?>
         </nav>
         
         <div class="ajuste">
